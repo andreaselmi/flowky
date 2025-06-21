@@ -36,6 +36,7 @@ A simple, visual productivity tracking app for personal time management. Track y
 - **React Testing Library** - Component testing utilities
 - **Playwright** - End-to-end testing
 - **ESLint + Prettier** - Code formatting and linting
+- **Storybook** - Component Docs and Visual testing
 
 ### **Build & Deployment**
 - **GitHub Actions** - CI/CD automation
