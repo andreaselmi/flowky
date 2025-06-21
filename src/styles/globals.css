@@ -1,0 +1,61 @@
+@theme {
+  /* Colors - Activity palette */
+  --color-activity-red: #ef4444;
+  --color-activity-teal: #14b8a6;
+  --color-activity-cyan: #06b6d4;
+  --color-activity-green: #10b981;
+  --color-activity-lime: #84cc16;
+  --color-activity-yellow: #eab308;
+  --color-activity-orange: #f97316;
+  --color-activity-pink: #ec4899;
+  --color-activity-purple: #a855f7;
+  --color-activity-violet: #8b5cf6;
+  --color-activity-blue: #3b82f6;
+  --color-activity-sky: #0ea5e9;
+
+  /* Colors - Semantic theme colors (will generate bg-surface, text-primary, etc.) */
+  --color-surface: #ffffff;         /* bg-surface */
+  --color-surface-secondary: #f8fafc; /* bg-surface-secondary */  
+  --color-surface-tertiary: #f1f5f9;  /* bg-surface-tertiary */
+  
+  --color-foreground: #1e293b;      /* text-foreground */
+  --color-foreground-secondary: #475569; /* text-foreground-secondary */
+  --color-foreground-muted: #64748b;     /* text-foreground-muted */
+  
+  --color-border: #e2e8f0;          /* border-border */
+
+  /* Colors - Primary scale (fixed colors) */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-card-dark: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== THEME VARIANTS ===== */
+.dark {
+  /* Override semantic colors for dark mode */
+  --color-surface: #1e293b;         /* Dark main background */
+  --color-surface-secondary: #334155; /* Dark card/secondary background */
+  --color-surface-tertiary: #475569;  /* Dark subtle background */
+  
+  --color-foreground: #f8fafc;      /* Light text on dark */
+  --color-foreground-secondary: #cbd5e1; /* Light secondary text */
+  --color-foreground-muted: #94a3b8;     /* Light muted text */
+  
+  --color-border: #475569;          /* Dark border color */
+}
