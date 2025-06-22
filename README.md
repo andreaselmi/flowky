@@ -20,6 +20,10 @@ A simple, visual productivity tracking app for personal time management. Track y
 - **Sass** - Powerful CSS extension
 - **Lucide React** - Beautiful, consistent icons
 
+### **Design Phase**
+- **Claude Sonnet 4** - UI/UX brainstorming, design concept exploration, and visual style comparison
+- **Lovable** - Interactive mockup prototyping and visual concept validation
+
 ### **State Management**
 - **Zustand** - Lightweight state management for activities and timer
 - **React Context** - Theme and global settings
