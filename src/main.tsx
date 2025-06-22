@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './design-system/reset.scss'
 import './index.scss'
 import App from './App.tsx'
 import { ThemeProvider } from './context/theme'

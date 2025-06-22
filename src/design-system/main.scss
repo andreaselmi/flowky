@@ -4,7 +4,6 @@
 @use 'sass:map';
 @use 'mixins/theme' as *;
 
-
 // Default: light theme
 :root {
 	@include generate-theme-vars($light-theme);

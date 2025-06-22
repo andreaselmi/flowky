@@ -1,16 +1,12 @@
-import './styles/main.scss';
-import { useTheme } from './context/theme';
+import Home from './features/home';
+import "./design-system/main.scss"
 
 const App = () => {
-  const { toggleTheme } = useTheme();
 
   return (
-    <div className="container">
-      <div className="card" >
-        <p className="card-title">test</p>
-        <button onClick={toggleTheme}>Toggle Theme</button>
-      </div >
-    </div>
+    <main className='main'>
+      <Home />
+    </main>
   )
 };
 

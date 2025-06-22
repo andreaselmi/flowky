@@ -1,0 +1,5 @@
+@use '../../design-system/mixins/base' as *;
+
+.button {
+	@include button-base;
+}
