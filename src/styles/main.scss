@@ -1,7 +1,9 @@
-@import 'tokens/colors';
-@import 'themes/light';
-@import 'themes/dark';
-@import 'mixins/theme';
+@use 'themes/light' as *;
+@use 'themes/dark' as *;
+
+@use 'sass:map';
+@use 'mixins/theme' as *;
+
 
 // Default: light theme
 :root {
