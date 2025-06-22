@@ -17,7 +17,7 @@ A simple, visual productivity tracking app for personal time management. Track y
 - **React 19** - Modern UI framework
 - **TypeScript** - Type safety and better DX
 - **Vite** - Fast build tool and dev server
-- **Tailwind CSS** - Utility-first CSS framework
+- **Sass** - Powerful CSS extension
 - **Lucide React** - Beautiful, consistent icons
 
 ### **State Management**
