@@ -1,8 +1,12 @@
+import './styles/main.scss';
+
 const App = () => {
   return (
     <main className="dark">
-      <div className="bg-surface">
-        <p className="text-foreground">test</p>
+      <div className="container">
+        <div className="card">
+          <p className="card-title">test</p>
+        </div>
       </div>
     </main>
   )

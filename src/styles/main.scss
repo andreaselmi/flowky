@@ -1,0 +1,14 @@
+@import 'tokens/colors';
+@import 'themes/light';
+@import 'themes/dark';
+@import 'mixins/theme';
+
+// Default: light theme
+:root {
+	@include generate-theme-vars($theme-light);
+}
+
+// When the .dark class is present, use dark theme
+.dark {
+	@include generate-theme-vars($theme-dark);
+}

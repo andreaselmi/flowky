@@ -1,0 +1,8 @@
+@import '../tokens/colors';
+
+$theme-dark: (
+	surface: map-get($palette, gray-900),
+	surface-card: map-get($palette, gray-800),
+	text: map-get($palette, white),
+	text-muted: map-get($palette, gray-200),
+);

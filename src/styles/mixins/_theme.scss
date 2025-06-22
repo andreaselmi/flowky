@@ -1,0 +1,5 @@
+@mixin generate-theme-vars($theme-map) {
+	@each $name, $color in $theme-map {
+		--color-#{$name}: #{$color};
+	}
+}
