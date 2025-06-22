@@ -1,0 +1,17 @@
+$effects: (
+	// Backdrop Blur
+	backdrop-blur-sm: blur(4px),
+	backdrop-blur-md: blur(8px),
+	backdrop-blur-lg: blur(16px),
+	backdrop-blur-xl: blur(24px),
+
+	// Scale Transforms
+	scale-hover: 1.02,
+	scale-card-hover: 1.05,
+
+	// Transitions
+	transition-fast: 200ms ease-in-out,
+	transition-normal: 300ms ease-in-out,
+	transition-slow: 500ms ease-in-out,
+	transition-theme: 700ms ease-in-out,
+);

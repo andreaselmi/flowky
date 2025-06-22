@@ -1,9 +1,37 @@
 @use '../tokens/colors' as *;
 @use 'sass:map';
 
-$theme-dark: (
-	surface: map.get($palette, gray-900),
-	surface-card: map.get($palette, gray-800),
-	text: map.get($palette, white),
-	text-muted: map.get($palette, gray-200),
+$dark-theme: (
+	// Backgrounds
+	background-primary: linear-gradient(135deg, #111827 0%, #1e293b 50%, #111827 100%),
+	background-card: rgba(255, 255, 255, 0.05),
+	background-card-hover: rgba(255, 255, 255, 0.1),
+	background-input: rgba(255, 255, 255, 0.1),
+	background-input-focus: rgba(255, 255, 255, 0.2),
+	background-summary: rgba(255, 255, 255, 0.05),
+	background-add-card: rgba(255, 255, 255, 0.05),
+	background-header-button: rgba(255, 255, 255, 0.1),
+	background-header-button-hover: rgba(255, 255, 255, 0.2),
+
+	// Borders
+	border-card: rgba(255, 255, 255, 0.15),
+	border-input: rgba(255, 255, 255, 0.2),
+	border-input-focus: rgba(255, 255, 255, 0.4),
+	border-header-button: rgba(255, 255, 255, 0.2),
+	border-dashed: rgba(255, 255, 255, 0.2),
+	border-dashed-hover: rgba(255, 255, 255, 0.4),
+
+	// Text
+	text-primary: palette(white),
+	text-secondary: rgba(255, 255, 255, 0.8),
+	text-muted: rgba(255, 255, 255, 0.7),
+	text-label: rgba(255, 255, 255, 0.8),
+	text-placeholder: rgba(255, 255, 255, 0.6),
+	text-button-secondary: rgba(255, 255, 255, 0.6),
+	text-button-secondary-hover: palette(white),
+	text-add-card: rgba(255, 255, 255, 0.6),
+
+	// Gradients
+	gradient-primary: map.get($gradients, primary-dark),
+	gradient-primary-hover: map.get($gradients, primary-dark-hover),
 );

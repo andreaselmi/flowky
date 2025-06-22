@@ -1,9 +1,37 @@
 @use 'sass:map';
 @use '../tokens/colors' as *;
 
-$theme-light: (
-	surface: map.get($palette, white),
-	surface-card: map.get($palette, gray-50),
-	text: map.get($palette, gray-900),
-	text-muted: map.get($palette, gray-500)
+$light-theme: (
+	// Backgrounds
+	background-primary: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, #f3f4f6 100%),
+	background-card: rgba(255, 255, 255, 0.4),
+	background-card-hover: rgba(255, 255, 255, 0.6),
+	background-input: rgba(255, 255, 255, 0.6),
+	background-input-focus: rgba(255, 255, 255, 0.8),
+	background-summary: rgba(255, 255, 255, 0.3),
+	background-add-card: rgba(255, 255, 255, 0.3),
+	background-header-button: rgba(255, 255, 255, 0.6),
+	background-header-button-hover: rgba(255, 255, 255, 0.8),
+
+	// Borders
+	border-card: palette(gray-200),
+	border-input: palette(gray-300),
+	border-input-focus: palette(gray-400),
+	border-header-button: palette(gray-200),
+	border-dashed: palette(gray-300),
+	border-dashed-hover: palette(gray-400),
+
+	// Text
+	text-primary: palette(gray-800),
+	text-secondary: palette(gray-600),
+	text-muted: palette(gray-500),
+	text-label: palette(gray-600),
+	text-placeholder: palette(gray-500),
+	text-button-secondary: palette(gray-500),
+	text-button-secondary-hover: palette(gray-700),
+	text-add-card: palette(gray-600),
+
+	// Gradients
+	gradient-primary: map.get($gradients, primary-light),
+	gradient-primary-hover: map.get($gradients, primary-light-hover),
 );

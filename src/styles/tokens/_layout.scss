@@ -1,0 +1,38 @@
+@use 'sass:map';
+@use 'spacing' as *;
+
+$layout: (
+	// Container
+	// 1152px (max-w-6xl equivalent)
+	container-max-width: 72rem,
+
+	// Grid
+	grid-gap-sm: map.get($spacing, 4),
+	grid-gap-md: map.get($spacing, 6),
+	grid-gap-lg: map.get($spacing, 8),
+
+	// Card Heights
+	// 140px
+	card-min-height: 8.75rem,
+
+	// Header
+	// 64px
+	header-height: 4rem,
+);
+
+$z-index: (
+	base: 0,
+	dropdown: 10,
+	modal: 20,
+	tooltip: 30,
+	header: 40,
+	overlay: 50,
+);
+
+$breakpoints: (
+	sm: 640px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1280px,
+	2xl: 1536px,
+);

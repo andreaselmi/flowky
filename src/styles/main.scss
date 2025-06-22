@@ -7,10 +7,10 @@
 
 // Default: light theme
 :root {
-	@include generate-theme-vars($theme-light);
+	@include generate-theme-vars($light-theme);
 }
 
 // When the .dark class is present, use dark theme
 .dark {
-	@include generate-theme-vars($theme-dark);
+	@include generate-theme-vars($dark-theme);
 }
