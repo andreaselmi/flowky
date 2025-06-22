@@ -5,17 +5,6 @@
 @use '../tokens/layout' as *;
 @use '../tokens/typography' as *;
 
-// @mixin button-base {
-// 	padding: map.get($spacing, 4);
-// 	border-radius: map.get($border-radius, lg);
-// 	background-color: map.get($palette, red-500);
-// 	border: none;
-
-// 	&:hover {
-// 		cursor: pointer;
-// 	}
-// }
-
 @mixin font-primary {
 	font-family: typo('font-family-primary');
 }
