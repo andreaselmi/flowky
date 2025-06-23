@@ -25,7 +25,6 @@ A simple, visual productivity tracking app for personal time management. Track y
 - **Lovable** - Interactive mockup prototyping and visual concept validation
 
 ### **State Management**
-- **Zustand** - Lightweight state management for activities and timer
 - **React Context** - Theme and global settings
 - **TanStack Query** - Server state management and caching
 
