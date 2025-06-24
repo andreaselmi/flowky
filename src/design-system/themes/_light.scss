@@ -5,14 +5,14 @@
 $light-theme: (
 	// Backgrounds
 	background-primary: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, #f3f4f6 100%),
-	background-card: rgba(255, 255, 255, 0.4),
-	background-card-hover: rgba(255, 255, 255, 0.6),
-	background-input: rgba(255, 255, 255, 0.6),
-	background-input-focus: rgba(255, 255, 255, 0.8),
-	background-summary: rgba(255, 255, 255, 0.3),
-	background-add-card: rgba(255, 255, 255, 0.3),
-	background-button: rgba(255, 255, 255, 0.6),
-	background-button-hover: rgba(255, 255, 255, 0.8),
+	background-card: color(white-alpha-40),
+	background-card-hover: color(white-alpha-60),
+	background-input: color(white-alpha-60),
+	background-input-focus: color(white-alpha-80),
+	background-summary: color(white-alpha-30),
+	background-add-card: color(white-alpha-30),
+	background-button: color(white-alpha-60),
+	background-button-hover: color(white-alpha-80),
 
 	// Borders
 	border-card: color(gray-200),
