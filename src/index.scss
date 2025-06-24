@@ -1,8 +1,2 @@
 @use './design-system/functions/helpers' as *;
-
-.main {
-	display: grid;
-	place-items: center;
-	height: 100vh;
-	width: 100vw;
-}
+@use './design-system/main.scss';

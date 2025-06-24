@@ -1,5 +1,12 @@
 @use '../../design-system/mixins/base' as *;
+@use '../../design-system/functions/helpers' as *;
+@use '../../design-system/tokens/colors' as *;
 
 .button {
 	@include button-base;
+
+	&.primary {
+		background: var(--color-gradient-primary);
+		border: none;
+	}	
 }
