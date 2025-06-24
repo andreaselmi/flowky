@@ -5,6 +5,16 @@ $palette: (
 	white: #ffffff,
 	black: #000000,
 
+	// White alpha variants
+	white-alpha-5: rgba(255, 255, 255, 0.05),
+	white-alpha-10: rgba(255, 255, 255, 0.1),
+	white-alpha-15: rgba(255, 255, 255, 0.15),
+	white-alpha-20: rgba(255, 255, 255, 0.2),
+	white-alpha-40: rgba(255, 255, 255, 0.4),
+	white-alpha-60: rgba(255, 255, 255, 0.6),
+	white-alpha-70: rgba(255, 255, 255, 0.7),
+	white-alpha-80: rgba(255, 255, 255, 0.8),
+
 	// Grays (for light mode borders & text)
 	gray-50: #fafafa,
 	gray-100: #f5f5f5,

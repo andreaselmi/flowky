@@ -1,35 +1,36 @@
 @use '../tokens/colors' as *;
+@use '../functions/helpers' as *;
 @use 'sass:map';
 
 $dark-theme: (
 	// Backgrounds
 	background-primary: linear-gradient(135deg, #111827 0%, #1e293b 50%, #111827 100%),
-	background-card: rgba(255, 255, 255, 0.05),
-	background-card-hover: rgba(255, 255, 255, 0.1),
-	background-input: rgba(255, 255, 255, 0.1),
-	background-input-focus: rgba(255, 255, 255, 0.2),
-	background-summary: rgba(255, 255, 255, 0.05),
-	background-add-card: rgba(255, 255, 255, 0.05),
-	background-header-button: rgba(255, 255, 255, 0.1),
-	background-header-button-hover: rgba(255, 255, 255, 0.2),
+	background-card: color(white-alpha-5),
+	background-card-hover: color(white-alpha-10),
+	background-input: color(white-alpha-10),
+	background-input-focus: color(white-alpha-20),
+	background-summary: color(white-alpha-5),
+	background-add-card: color(white-alpha-5),
+	background-button: color(white-alpha-10),
+	background-button-hover: color(white-alpha-20),
 
 	// Borders
-	border-card: rgba(255, 255, 255, 0.15),
-	border-input: rgba(255, 255, 255, 0.2),
-	border-input-focus: rgba(255, 255, 255, 0.4),
-	border-header-button: rgba(255, 255, 255, 0.2),
-	border-dashed: rgba(255, 255, 255, 0.2),
-	border-dashed-hover: rgba(255, 255, 255, 0.4),
+	border-card: color(white-alpha-15),
+	border-input: color(white-alpha-20),
+	border-input-focus: color(white-alpha-40),
+	border-button: color(white-alpha-20),
+	border-dashed: color(white-alpha-20),
+	border-dashed-hover: color(white-alpha-40),
 
 	// Text
-	text-primary: palette(white),
-	text-secondary: rgba(255, 255, 255, 0.8),
-	text-muted: rgba(255, 255, 255, 0.7),
-	text-label: rgba(255, 255, 255, 0.8),
-	text-placeholder: rgba(255, 255, 255, 0.6),
-	text-button-secondary: rgba(255, 255, 255, 0.6),
-	text-button-secondary-hover: palette(white),
-	text-add-card: rgba(255, 255, 255, 0.6),
+	text-primary: color(white),
+	text-secondary: color(white-alpha-80),
+	text-muted: color(white-alpha-70),
+	text-label: color(white-alpha-80),
+	text-placeholder: color(white-alpha-60),
+	text-button-secondary: color(white-alpha-60),
+	text-button-secondary-hover: color(white),
+	text-add-card: color(white-alpha-60),
 
 	// Gradients
 	gradient-primary: map.get($gradients, primary-dark),

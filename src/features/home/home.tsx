@@ -7,7 +7,7 @@ const Home = () => {
 	const { toggleTheme } = useTheme()
 	return (
 		<div className={styles.home}>
-			<Button onClick={toggleTheme} variant='primary'>
+			<Button onClick={toggleTheme} variant='secondary'>
 				Switch Theme
 			</Button>
 		</div>
