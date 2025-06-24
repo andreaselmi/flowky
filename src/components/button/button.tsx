@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const Button = ({ onClick, children, variant = 'primary' }: ButtonProps) => {
 	return (
-		<button className={clsx(styles.button, variant === 'secondary' && styles.secondary)} onClick={onClick}>
+		<button className={clsx(styles.button, styles[variant])} onClick={onClick}>
 			{children}
 		</button>
 	);
