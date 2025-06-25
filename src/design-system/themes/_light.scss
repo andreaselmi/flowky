@@ -1,10 +1,15 @@
-@use 'sass:map';
-@use '../functions/helpers' as *;
-@use '../tokens/colors' as *;
+@use "sass:map";
+@use "../functions/helpers" as *;
+@use "../tokens/colors" as *;
 
 $light-theme: (
 	// Backgrounds
-	background-primary: linear-gradient(135deg, #f9fafb 0%, #ffffff 50%, #f3f4f6 100%),
+	background-primary: linear-gradient(
+			135deg,
+			#f9fafb 0%,
+			#ffffff 50%,
+			#f3f4f6 100%
+		),
 	background-card: color(white-alpha-40),
 	background-card-hover: color(white-alpha-60),
 	background-input: color(white-alpha-60),
@@ -13,7 +18,6 @@ $light-theme: (
 	background-add-card: color(white-alpha-30),
 	background-button: color(white-alpha-60),
 	background-button-hover: color(white-alpha-80),
-
 	// Borders
 	border-card: color(gray-200),
 	border-input: color(gray-300),
@@ -21,7 +25,6 @@ $light-theme: (
 	border-button: color(gray-200),
 	border-dashed: color(gray-300),
 	border-dashed-hover: color(gray-400),
-
 	// Text
 	text-primary: color(gray-800),
 	text-secondary: color(gray-600),
@@ -31,8 +34,7 @@ $light-theme: (
 	text-button-secondary: color(gray-500),
 	text-button-secondary-hover: color(gray-700),
 	text-add-card: color(gray-600),
-
 	// Gradients
 	gradient-primary: map.get($gradients, primary-light),
-	gradient-primary-hover: map.get($gradients, primary-light-hover),
+	gradient-primary-hover: map.get($gradients, primary-light-hover)
 );

@@ -1,8 +1,8 @@
-@use 'themes/light' as *;
-@use 'themes/dark' as *;
+@use "themes/light" as *;
+@use "themes/dark" as *;
 
-@use 'sass:map';
-@use 'mixins/theme' as *;
+@use "sass:map";
+@use "mixins/theme" as *;
 
 // Default: light theme
 :root {

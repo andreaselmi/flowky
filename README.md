@@ -14,6 +14,7 @@ A simple, visual productivity tracking app for personal time management. Track y
 ## 🛠️ Tech Stack
 
 ### **Frontend**
+
 - **React 19** - Modern UI framework
 - **TypeScript** - Type safety and better DX
 - **Vite** - Fast build tool and dev server
@@ -21,17 +22,20 @@ A simple, visual productivity tracking app for personal time management. Track y
 - **Lucide React** - Beautiful, consistent icons
 
 ### **State Management**
+
 - **Zustand** - Lightweight state management for activities and timer
 - **React Context** - Theme and global settings
 - **TanStack Query** - Server state management and caching
 
 ### **Backend & Database**
+
 - **Firebase Authentication** - User management with social login
 - **Cloud Firestore** - NoSQL database for activity data
 - **Firebase Hosting** - Static site hosting
 - **Firebase Security Rules** - Data protection and access control
 
 ### **Development & Testing**
+
 - **Vitest** - Fast unit testing framework
 - **React Testing Library** - Component testing utilities
 - **Playwright** - End-to-end testing
@@ -39,18 +43,19 @@ A simple, visual productivity tracking app for personal time management. Track y
 - **Storybook** - Component Docs and Visual testing
 
 ### **Build & Deployment**
+
 - **GitHub Actions** - CI/CD automation
 - **Netlify** - Static site hosting and deployment
 - **Sentry** - Error tracking and monitoring
 
 ### **Additional Tools**
+
 - **day.js** - Lightweight date manipulation
-
-
 
 ## 🗺️ Roadmap
 
 ### **MVP (Alpha) - v0.1.0**
+
 - [ ] Basic activity management
 - [ ] Weekly calendar view
 - [ ] Session-only state persistence (React + Zustand)
@@ -58,15 +63,18 @@ A simple, visual productivity tracking app for personal time management. Track y
 - [ ] Dark/light mode toggle
 
 ### **Beta - v0.2.0**
+
 - [ ] Firebase integration
 - [ ] User authentication
 - [ ] Data persistence in database
 
 ### **v1.0 - Production Release**
+
 - [ ] Performance optimization
 - [ ] Production-ready deployment
 
 ### **Future Features**
+
 - [ ] Timer functionality (start/stop with manual tracking)
 - [ ] Activity statistics and analytics
 - [ ] Data export features
@@ -85,7 +93,6 @@ A simple, visual productivity tracking app for personal time management. Track y
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 
 ## 💡 Inspiration
 

@@ -1,4 +1,4 @@
-@use 'sass:map';
+@use "sass:map";
 
 $palette: (
 	// Base Colors
@@ -15,7 +15,6 @@ $palette: (
 	white-alpha-60: rgba(255, 255, 255, 0.6),
 	white-alpha-70: rgba(255, 255, 255, 0.7),
 	white-alpha-80: rgba(255, 255, 255, 0.8),
-
 	// Grays (for light mode borders & text)
 	gray-50: #fafafa,
 	gray-100: #f5f5f5,
@@ -50,12 +49,28 @@ $palette: (
 	pink-500: #ec4899,
 	pink-600: #db2777,
 	violet-600: #7c3aed,
-	violet-700: #6d28d9,
+	violet-700: #6d28d9
 );
 
 $gradients: (
-	primary-light: linear-gradient(135deg, map.get($palette, pink-500), map.get($palette, violet-600)),
-	primary-light-hover: linear-gradient(135deg, map.get($palette, pink-600), map.get($palette, violet-700)),
-	primary-dark: linear-gradient(135deg, map.get($palette, blue-600), map.get($palette, purple-700)),
-	primary-dark-hover: linear-gradient(135deg, map.get($palette, blue-700), map.get($palette, purple-700)),
+	primary-light: linear-gradient(
+			135deg,
+			map.get($palette, pink-500),
+			map.get($palette, violet-600)
+		),
+	primary-light-hover: linear-gradient(
+			135deg,
+			map.get($palette, pink-600),
+			map.get($palette, violet-700)
+		),
+	primary-dark: linear-gradient(
+			135deg,
+			map.get($palette, blue-600),
+			map.get($palette, purple-700)
+		),
+	primary-dark-hover: linear-gradient(
+			135deg,
+			map.get($palette, blue-700),
+			map.get($palette, purple-700)
+		),
 );

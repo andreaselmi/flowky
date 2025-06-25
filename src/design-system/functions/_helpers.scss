@@ -1,8 +1,8 @@
-@use 'sass:map';
-@use '../tokens/colors' as *;
-@use '../tokens/spacing' as *;
-@use '../tokens/typography' as *;
-@use '../tokens/effects' as *;
+@use "sass:map";
+@use "../tokens/colors" as *;
+@use "../tokens/spacing" as *;
+@use "../tokens/typography" as *;
+@use "../tokens/effects" as *;
 
 @function color($name) {
 	@return map.get($palette, $name);

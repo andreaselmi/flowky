@@ -1,13 +1,13 @@
-import Button from '../../components/button';
-import { useTheme } from '../../context/theme';
-
-import styles from './styles.module.scss';
+import Button from "../../components/button";
+import { useTheme } from "../../context/theme";
+import styles from "./styles.module.scss";
 
 const Home = () => {
-	const { toggleTheme } = useTheme()
+	const { toggleTheme } = useTheme();
+
 	return (
 		<div className={styles.home}>
-			<Button onClick={toggleTheme} variant='secondary'>
+			<Button onClick={toggleTheme} variant="secondary">
 				Switch Theme
 			</Button>
 		</div>
