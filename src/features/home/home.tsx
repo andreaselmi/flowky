@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
 
 import Button from "../../components/button";
+import ToggleThemeButton from "../../components/toggle-theme-button";
 import { useTheme } from "../../context/theme";
 import styles from "./styles.module.scss";
 
@@ -16,6 +17,7 @@ const Home = () => {
 			>
 				Switch Theme
 			</Button>
+			<ToggleThemeButton onClick={toggleTheme} />
 		</div>
 	);
 };

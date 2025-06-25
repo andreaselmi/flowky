@@ -1,0 +1,23 @@
+@use "../../design-system/mixins/base" as *;
+@use "../../design-system/functions/helpers" as *;
+
+.iconButton {
+	@include button-base;
+
+	background: var(--color-background-button);
+	border: 1px solid var(--color-border-button);
+	color: var(--color-text-primary);
+	padding: space(3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:hover {
+		background: var(--color-background-button-hover);
+	}
+}
+
+.icon {
+	display: inline-block;
+	transition: transform 0.5s ease;
+  }
