@@ -1,5 +1,5 @@
-@use 'sass:map';
-@use 'spacing' as *;
+@use "sass:map";
+@use "spacing" as *;
 
 $layout: (
 	// Container
@@ -10,14 +10,13 @@ $layout: (
 	grid-gap-sm: map.get($spacing, 4),
 	grid-gap-md: map.get($spacing, 6),
 	grid-gap-lg: map.get($spacing, 8),
-
 	// Card Heights
 	// 140px
 	card-min-height: 8.75rem,
 
 	// Header
 	// 64px
-	header-height: 4rem,
+	header-height: 4rem
 );
 
 $z-index: (

@@ -1,16 +1,29 @@
-import type { ReactNode } from 'react';
-import styles from './styles.module.scss'
-import clsx from 'clsx';
+import clsx from "clsx";
+import type { ReactElement, ReactNode } from "react";
 
-interface ButtonProps {
+import styles from "./styles.module.scss";
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	onClick?: () => void;
 	children: ReactNode;
-	variant?: 'primary' | 'secondary';
+	variant?: "primary" | "secondary";
+	icon?: ReactElement;
 }
 
-const Button = ({ onClick, children, variant = 'primary' }: ButtonProps) => {
+const Button = ({
+	children,
+	icon: Icon,
+	onClick,
+	variant = "primary",
+	...restProps
+}: ButtonProps) => {
 	return (
-		<button className={clsx(styles.button, styles[variant])} onClick={onClick}>
+		<button
+			className={clsx(styles.button, styles[variant])}
+			onClick={onClick}
+			{...restProps}
+		>
+			{Icon && Icon}
 			{children}
 		</button>
 	);

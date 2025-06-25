@@ -1,36 +1,20 @@
-@use 'sass:map';
-@use '../tokens/colors' as *;
-@use '../tokens/spacing' as *;
-@use '../functions/helpers' as *;
-@use '../tokens/layout' as *;
-@use '../tokens/typography' as *;
-
-@mixin font-primary {
-	font-family: typo('font-family-primary');
-}
-
-@mixin text-base {
-	font-size: typo('font-size-base');
-	line-height: typo('line-height-normal');
-}
-
-@function radius($size) {
-	@return map.get($border-radius, $size);
-}
+@use "sass:map";
+@use "../tokens/colors" as *;
+@use "../tokens/spacing" as *;
+@use "../functions/helpers" as *;
+@use "../tokens/layout" as *;
+@use "./typography" as *;
 
 @mixin button-base {
+	@include typography-button;
 	border-radius: radius(2xl);
 	padding: space(4) space(8);
-	color: color(white);
-	font-weight: typo('font-weight-semibold');
-	@include font-primary;
-	@include text-base;
 	cursor: pointer;
-	transition: effect('transition-normal');
+	transition: effect("transition-normal");
 
 	&:hover {
 		background: var(--color-gradient-primary-hover);
-		transform: scale(effect('scale-hover'));
+		transform: scale(effect("scale-hover"));
 	}
 
 	&:active {

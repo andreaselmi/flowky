@@ -1,13 +1,19 @@
-import Button from '../../components/button';
-import { useTheme } from '../../context/theme';
+import { Plus } from "lucide-react";
 
-import styles from './styles.module.scss';
+import Button from "../../components/button";
+import { useTheme } from "../../context/theme";
+import styles from "./styles.module.scss";
 
 const Home = () => {
-	const { toggleTheme } = useTheme()
+	const { toggleTheme } = useTheme();
+
 	return (
 		<div className={styles.home}>
-			<Button onClick={toggleTheme} variant='primary'>
+			<Button
+				onClick={toggleTheme}
+				variant="secondary"
+				icon={<Plus size={16} />}
+			>
 				Switch Theme
 			</Button>
 		</div>
