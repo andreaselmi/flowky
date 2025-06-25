@@ -6,14 +6,12 @@ on:
 
 jobs:
     ci:
-        name: Lint, Test and SonarQube Analysis
+        name: Lint and Test
         runs-on: ubuntu-latest
 
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-              with:
-                  fetch-depth: 0 # Shallow clones should be disabled for a better relevancy of analysis
 
             - name: Setup Node.js and cache Yarn
               uses: actions/setup-node@v4
@@ -51,8 +49,3 @@ jobs:
 
             - name: Run storybook tests
               run: yarn run test:storybook
-
-            - name: SonarQube Scan
-              uses: SonarSource/sonarqube-scan-action@v5
-              env:
-                  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
