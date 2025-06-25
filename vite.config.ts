@@ -29,6 +29,16 @@ export default defineConfig({
 		setupFiles: ["./src/test/setup.ts"],
 		projects: [
 			{
+				// Unit tests project
+				extends: true,
+				test: {
+					name: "unit",
+					include: ["**/*.{test,spec}.{js,ts,jsx,tsx}"],
+					exclude: ["**/*.stories.{js,ts,jsx,tsx}", "node_modules/"],
+				},
+			},
+			{
+				// Storybook tests project
 				extends: true,
 				plugins: [
 					// The plugin will run tests for the stories defined in your Storybook config
@@ -50,6 +60,7 @@ export default defineConfig({
 						],
 					},
 					setupFiles: [".storybook/vitest.setup.ts"],
+					exclude: ["node_modules/"],
 				},
 			},
 		],

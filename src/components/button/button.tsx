@@ -3,7 +3,7 @@ import type { ReactElement, ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	onClick?: () => void;
 	children: ReactNode;
 	variant?: "primary" | "secondary";
@@ -15,11 +15,13 @@ const Button = ({
 	icon: Icon,
 	onClick,
 	variant = "primary",
+	...restProps
 }: ButtonProps) => {
 	return (
 		<button
 			className={clsx(styles.button, styles[variant])}
 			onClick={onClick}
+			{...restProps}
 		>
 			{Icon && Icon}
 			{children}

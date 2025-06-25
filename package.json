@@ -12,11 +12,14 @@
 		"format:check": "prettier --check .",
 		"preview": "vite preview",
 		"test": "vitest",
+		"test:unit": "vitest --project unit",
+		"test:storybook": "vitest --project storybook",
 		"test:ui": "vitest --ui",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
+		"@types/node": "^24.0.4",
 		"clsx": "^2.1.1",
 		"lucide-react": "^0.522.0",
 		"react": "^19.1.0",
