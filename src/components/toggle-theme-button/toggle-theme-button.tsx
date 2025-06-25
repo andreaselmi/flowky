@@ -7,9 +7,14 @@ import styles from "./styles.module.scss";
 interface ToggleThemeButtonProps
 	extends ButtonHTMLAttributes<HTMLButtonElement> {
 	onClick: () => void;
+	isDarkMode: boolean;
 }
 
-const ToggleThemeButton = ({ onClick, ...props }: ToggleThemeButtonProps) => {
+const ToggleThemeButton = ({
+	onClick,
+	isDarkMode,
+	...props
+}: ToggleThemeButtonProps) => {
 	const [rotation, setRotation] = useState(0);
 
 	const handleClick = () => {
@@ -19,7 +24,9 @@ const ToggleThemeButton = ({ onClick, ...props }: ToggleThemeButtonProps) => {
 
 	return (
 		<button
-			aria-label="Toggle theme"
+			aria-label={
+				isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+			}
 			onClick={handleClick}
 			className={clsx(styles.iconButton)}
 			{...props}

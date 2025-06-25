@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>;
 export const Light: Story = {
 	args: {
 		onClick: () => {},
+		isDarkMode: false,
 	},
 	decorators: [
 		Story => (
@@ -27,6 +28,7 @@ export const Light: Story = {
 export const Dark: Story = {
 	args: {
 		onClick: () => {},
+		isDarkMode: true,
 	},
 	decorators: [
 		Story => (
