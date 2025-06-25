@@ -4,8 +4,12 @@
 
 .button {
 	@include button-base;
+	display: flex;
+	align-items: center;
+	gap: space(2);
 
 	&.primary {
+		color: color(white);
 		background: var(--color-gradient-primary);
 		border: none;
 	}

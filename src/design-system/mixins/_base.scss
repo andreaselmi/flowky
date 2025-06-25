@@ -6,10 +6,9 @@
 @use "./typography" as *;
 
 @mixin button-base {
+	@include typography-button;
 	border-radius: radius(2xl);
 	padding: space(4) space(8);
-	color: color(white);
-	@include typography-button;
 	cursor: pointer;
 	transition: effect("transition-normal");
 
