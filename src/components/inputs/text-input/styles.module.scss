@@ -3,13 +3,16 @@
 @use "../../../design-system/mixins/typography" as *;
 @use "../../../design-system/functions/helpers" as *;
 
-.label {
+.container {
 	@include font-primary;
-	font-weight: 500;
 	display: flex;
 	flex-direction: column;
 	gap: space(3);
 	color: var(--color-text-primary);
+
+	.label {
+		font-weight: 600;
+	}
 	
 	.textInput {
 		@include glass-morphism;

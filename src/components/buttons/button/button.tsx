@@ -19,7 +19,7 @@ const Button = ({
 }: ButtonProps) => {
 	return (
 		<button
-			className={clsx(styles.button, styles[variant], styles.glass)}
+			className={clsx(styles.button, styles[variant])}
 			onClick={onClick}
 			{...restProps}
 		>
