@@ -6,14 +6,20 @@
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
 		"module": "ESNext",
 		"skipLibCheck": true,
-		/* Bundler mode */
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
 		"verbatimModuleSyntax": true,
 		"moduleDetection": "force",
 		"noEmit": true,
 		"jsx": "react-jsx",
-		/* Linting */
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@/components/*": ["src/components/*"],
+			"@/features/*": ["src/features/*"],
+			"@/context/*": ["src/context/*"],
+			"@/design-system/*": ["src/design-system/*"]
+		},
 		"strict": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,

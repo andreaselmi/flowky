@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Moon } from "lucide-react";
-import { type ButtonHTMLAttributes, useState } from "react";
+import { type ButtonHTMLAttributes, useEffect, useState } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -17,17 +17,16 @@ const ToggleThemeButton = ({
 }: ToggleThemeButtonProps) => {
 	const [rotation, setRotation] = useState(0);
 
-	const handleClick = () => {
-		setRotation(prev => prev + 180);
-		onClick();
-	};
+	useEffect(() => {
+		setRotation(isDarkMode ? 180 : 0);
+	}, [isDarkMode]);
 
 	return (
 		<button
 			aria-label={
 				isDarkMode ? "Switch to light mode" : "Switch to dark mode"
 			}
-			onClick={handleClick}
+			onClick={onClick}
 			className={clsx(styles.iconButton)}
 			{...props}
 		>

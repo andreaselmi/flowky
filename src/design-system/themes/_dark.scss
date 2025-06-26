@@ -10,24 +10,18 @@ $dark-theme: (
 			#1e293b 50%,
 			#111827 100%
 		),
+	
 	background-card: color(white-alpha-5),
 	background-card-hover: color(white-alpha-10),
-	background-input: color(white-alpha-10),
-	background-input-focus: color(white-alpha-20),
-	background-summary: color(white-alpha-5),
-	background-add-card: color(white-alpha-5),
-	background-button: color(white-alpha-10),
-	background-button-hover: color(white-alpha-20),
+
+	background-input: color(white-alpha-20),
+
 	// Borders
-	border-card: color(white-alpha-15),
-	border-input: color(white-alpha-20),
-	border-input-focus: color(white-alpha-40),
-	border-button: color(white-alpha-20),
-	border-dashed: color(white-alpha-20),
-	border-dashed-hover: color(white-alpha-40),
+	border-card: color(white-alpha-20),
+	border-card-hover: color(white-alpha-30),
 	// Text
 	text-primary: color(white),
-	text-secondary: color(white-alpha-80),
+	text-secondary: color(gray-200),
 
 	// Gradients
 	gradient-primary: map.get($gradients, primary-dark),

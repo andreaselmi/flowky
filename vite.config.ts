@@ -8,6 +8,7 @@ import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import checker from "vite-plugin-checker";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 const dirname =
 	typeof __dirname !== "undefined"
@@ -25,6 +26,7 @@ export default defineConfig({
 				tsconfigPath: "./tsconfig.app.json",
 			},
 		}),
+		tsconfigPaths(),
 	],
 	test: {
 		globals: true,

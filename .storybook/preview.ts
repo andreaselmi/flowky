@@ -1,6 +1,7 @@
 import "../src/design-system/reset.scss";
 import "../src/index.scss";
 import "../src/design-system/main.scss";
+import "./utils.scss";
 
 import type { Preview } from "@storybook/react-vite";
 
