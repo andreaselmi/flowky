@@ -25,9 +25,12 @@ describe("TextInput", () => {
 		const input = screen.getByRole("textbox");
 		const label = screen.getByText("Email Address");
 
-		// The input should be contained within the label element
-		expect(label.closest("label")).toContainElement(input);
-		expect(label.closest("label")).toHaveAttribute("for", "email-input");
+		// The label should have htmlFor attribute pointing to input id
+		expect(label).toHaveAttribute("for", "email-input");
+		expect(input).toHaveAttribute("id", "email-input");
+
+		// The input should be labeled by the label text
+		expect(input).toHaveAccessibleName("Email Address");
 	});
 
 	it("works without a label", () => {
@@ -223,17 +226,6 @@ describe("TextInput", () => {
 		const input = screen.getByTestId("custom-input");
 		expect(input).toHaveAttribute("maxlength", "10");
 		expect(input).toHaveAttribute("minlength", "2");
-	});
-
-	it("maintains accessibility when using label and id together", () => {
-		render(<TextInput label="Custom ID Input" id="custom-id" />);
-
-		const input = screen.getByRole("textbox");
-		const label = screen.getByText("Custom ID Input");
-
-		// Input should be contained within the label that has the htmlFor attribute
-		expect(label.closest("label")).toHaveAttribute("for", "custom-id");
-		expect(label.closest("label")).toContainElement(input);
 	});
 
 	it("integrates all features together correctly", async () => {
