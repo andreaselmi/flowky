@@ -33,18 +33,22 @@ const TextInput = ({
 	...restProps
 }: TextInputProps) => {
 	return (
-		<label htmlFor={id} className={styles.container}>
+		<div className={styles.container}>
 			{label && (
-				<span className={clsx(styles.label, labelClassName)}>
+				<label
+					htmlFor={id}
+					className={clsx(styles.label, labelClassName)}
+				>
 					{label}
-				</span>
+				</label>
 			)}
 			<input
+				id={id}
 				type={type}
 				className={clsx(styles.textInput, className)}
 				{...restProps}
 			/>
-		</label>
+		</div>
 	);
 };
 

@@ -23,7 +23,7 @@ const Home = () => {
 			<div className={styles.inputContainer}>
 				<TextInput
 					label="Minuti"
-					id="text-input"
+					id="minutes"
 					type="number"
 					placeholder="Inserisci un valore"
 				/>
