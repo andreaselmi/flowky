@@ -16,7 +16,8 @@
 		"test:storybook": "vitest --project storybook",
 		"test:ui": "vitest --ui",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build"
+		"build-storybook": "storybook build",
+		"generate-scss-types": "typed-scss-modules src --watch"
 	},
 	"dependencies": {
 		"@types/node": "^24.0.4",
@@ -60,6 +61,7 @@
 		"playwright": "^1.53.1",
 		"prettier": "^3.6.1",
 		"storybook": "^9.0.13",
+		"typed-scss-modules": "^8.1.1",
 		"typescript": "~5.8.3",
 		"typescript-eslint": "^8.30.1",
 		"vite": "^6.3.5",
