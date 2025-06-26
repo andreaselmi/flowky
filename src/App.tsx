@@ -1,6 +1,6 @@
-import "./design-system/main.scss";
+import "@/design-system/main.scss";
 
-import Home from "./features/home";
+import Home from "@/features/home";
 
 const App = () => {
 	return (

@@ -1,12 +1,13 @@
 import { Plus } from "lucide-react";
 
-import Button from "../../components/button";
-import ToggleThemeButton from "../../components/toggle-theme-button";
-import { useTheme } from "../../context/theme";
+import Button from "@/components/buttons/button";
+import TextInput from "@/components/inputs/text-input";
+import { useTheme } from "@/context/theme";
+
 import styles from "./styles.module.scss";
 
 const Home = () => {
-	const { theme, toggleTheme } = useTheme();
+	const { toggleTheme } = useTheme();
 
 	return (
 		<div className={styles.home}>
@@ -17,10 +18,11 @@ const Home = () => {
 			>
 				Switch Theme
 			</Button>
-			<ToggleThemeButton
+			<TextInput />
+			{/* <ToggleThemeButton
 				onClick={toggleTheme}
 				isDarkMode={theme === "dark"}
-			/>
+			/> */}
 		</div>
 	);
 };

@@ -1,0 +1,33 @@
+@use "../../../design-system/mixins/base" as *;
+@use "../../../design-system/mixins/effects" as *;
+@use "../../../design-system/functions/helpers" as *;
+@use "../../../design-system/tokens/colors" as *;
+
+.button {
+	@include button-base;
+	display: flex;
+	align-items: center;
+	gap: space(2);
+
+	&.primary {
+		color: color(white);
+		background: var(--color-gradient-primary);
+		border: none;
+
+		&:hover {
+			background: var(--color-gradient-primary-hover);
+		}
+	}
+
+	&.secondary {
+		@include glass-morphism-background;
+
+		&:hover {
+			@include glass-morphism-button-hover;
+		}
+
+		&:active {
+			transform: scale(0.98) translateY(0);
+		}
+	}
+}
