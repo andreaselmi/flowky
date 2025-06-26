@@ -23,7 +23,7 @@ const Button = ({
 			onClick={onClick}
 			{...restProps}
 		>
-			{Icon && Icon}
+			{Icon}
 			{children}
 		</button>
 	);
