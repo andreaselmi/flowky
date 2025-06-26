@@ -14,11 +14,14 @@ $dark-theme: (
 	background-card: color(white-alpha-5),
 	background-card-hover: color(white-alpha-10),
 
+	background-input: color(white-alpha-20),
+
 	// Borders
 	border-card: color(white-alpha-20),
 	border-card-hover: color(white-alpha-30),
 	// Text
 	text-primary: color(white),
+	text-secondary: color(gray-200),
 
 	// Gradients
 	gradient-primary: map.get($gradients, primary-dark),

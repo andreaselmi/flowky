@@ -22,8 +22,11 @@ $light-theme: (
 	// Borders
 	border-card: color(gray-200),
 	border-card-hover: color(gray-300),
+
 	// Text
 	text-primary: color(gray-800),
+	text-secondary: color(gray-500),
+	
 	// Gradients
 	gradient-primary: map.get($gradients, primary-light),
 	gradient-primary-hover: map.get($gradients, primary-light-hover)

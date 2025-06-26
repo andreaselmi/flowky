@@ -20,7 +20,7 @@
 	}
 
 	&.secondary {
-		@include glass-morphism-background;
+		@include glass-morphism;
 
 		&:hover {
 			@include glass-morphism-button-hover;

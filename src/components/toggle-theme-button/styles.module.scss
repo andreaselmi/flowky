@@ -4,7 +4,7 @@
 
 .iconButton {
 	@include button-base;
-	@include glass-morphism-background;
+	@include glass-morphism;
 
 	padding: space(3);
 	display: flex;

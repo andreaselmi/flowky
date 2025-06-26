@@ -23,7 +23,7 @@ export const PrimaryDark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="dark">
+			<div className="storybook-dark-container">
 				<Story />
 			</div>
 		),
@@ -44,13 +44,7 @@ export const SecondaryDark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div
-				className="dark"
-				style={{
-					backgroundColor: "rgba(0, 0, 0, 0.9)",
-					padding: "4rem",
-				}}
-			>
+			<div className="storybook-dark-container">
 				<Story />
 			</div>
 		),

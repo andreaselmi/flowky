@@ -40,6 +40,44 @@ describe("ToggleThemeButton", () => {
 		expect(icon).toBeInTheDocument();
 	});
 
+	it("applies correct rotation when in light mode", () => {
+		const handleClick = vi.fn();
+		render(<ToggleThemeButton onClick={handleClick} isDarkMode={false} />);
+
+		const icon = screen.getByRole("button").querySelector("svg");
+		expect(icon).toHaveStyle("transform: rotate(0deg)");
+	});
+
+	it("applies correct rotation when in dark mode", () => {
+		const handleClick = vi.fn();
+		render(<ToggleThemeButton onClick={handleClick} isDarkMode={true} />);
+
+		const icon = screen.getByRole("button").querySelector("svg");
+		expect(icon).toHaveStyle("transform: rotate(180deg)");
+	});
+
+	it("updates rotation when isDarkMode prop changes", () => {
+		const handleClick = vi.fn();
+		const { rerender } = render(
+			<ToggleThemeButton onClick={handleClick} isDarkMode={false} />
+		);
+
+		const icon = screen.getByRole("button").querySelector("svg");
+
+		// Initially in light mode (0 degrees)
+		expect(icon).toHaveStyle("transform: rotate(0deg)");
+
+		// Re-render with dark mode
+		rerender(<ToggleThemeButton onClick={handleClick} isDarkMode={true} />);
+		expect(icon).toHaveStyle("transform: rotate(180deg)");
+
+		// Re-render back to light mode
+		rerender(
+			<ToggleThemeButton onClick={handleClick} isDarkMode={false} />
+		);
+		expect(icon).toHaveStyle("transform: rotate(0deg)");
+	});
+
 	it("executes click handler when user clicks the button", async () => {
 		const handleClick = vi.fn();
 		render(<ToggleThemeButton onClick={handleClick} isDarkMode={false} />);
@@ -141,6 +179,20 @@ describe("ToggleThemeButton", () => {
 		expect(button).toHaveClass("custom-class");
 	});
 
+	it("maintains correct rotation even when disabled", () => {
+		const handleClick = vi.fn();
+		render(
+			<ToggleThemeButton
+				onClick={handleClick}
+				disabled
+				isDarkMode={true}
+			/>
+		);
+
+		const icon = screen.getByRole("button").querySelector("svg");
+		expect(icon).toHaveStyle("transform: rotate(180deg)");
+	});
+
 	it("integrates all features together correctly", async () => {
 		const handleClick = vi.fn();
 		render(
@@ -157,6 +209,9 @@ describe("ToggleThemeButton", () => {
 		// User can see the icon
 		const icon = button.querySelector("svg");
 		expect(icon).toBeInTheDocument();
+
+		// Icon has correct rotation for light mode
+		expect(icon).toHaveStyle("transform: rotate(0deg)");
 
 		// User can see the accessible label
 		expect(button).toHaveAccessibleName("Switch to dark mode");

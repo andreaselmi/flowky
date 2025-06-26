@@ -1,0 +1,11 @@
+@use "../src/design-system/mixins/theme" as *;
+@use "../src/design-system/themes/dark" as *;
+
+.storybook-dark-container {
+	background: var(--color-background-primary);
+	min-height: 100px;
+	padding: 1rem;
+	
+	// Apply dark theme variables
+	@include generate-theme-vars($dark-theme);
+  }

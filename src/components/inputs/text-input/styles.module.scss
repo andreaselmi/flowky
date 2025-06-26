@@ -1,0 +1,35 @@
+@use "../../../design-system/mixins/base" as *;
+@use "../../../design-system/mixins/effects" as *;
+@use "../../../design-system/mixins/typography" as *;
+@use "../../../design-system/functions/helpers" as *;
+
+.label {
+	@include font-primary;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	gap: space(3);
+	color: var(--color-text-primary);
+	
+	.textInput {
+		@include glass-morphism;
+		background-color: var(--color-background-input);
+	
+		border-radius: radius(2xl);
+		padding: space(4);
+
+		&::placeholder {
+			color: var(--color-text-secondary);
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&[type="number"] {
+			-moz-appearance: textfield;
+		}
+	}
+}

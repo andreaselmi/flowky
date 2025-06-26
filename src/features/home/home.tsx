@@ -13,12 +13,21 @@ const Home = () => {
 		<div className={styles.home}>
 			<Button
 				onClick={toggleTheme}
-				variant="secondary"
+				variant="primary"
 				icon={<Plus size={16} />}
+				style={{ marginBottom: "2rem" }}
 			>
 				Switch Theme
 			</Button>
-			<TextInput />
+
+			<div className={styles.inputContainer}>
+				<TextInput
+					label="Minuti"
+					type="number"
+					id="text-input"
+					placeholder="Inserisci un valore"
+				/>
+			</div>
 			{/* <ToggleThemeButton
 				onClick={toggleTheme}
 				isDarkMode={theme === "dark"}
