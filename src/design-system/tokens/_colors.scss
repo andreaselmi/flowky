@@ -1,5 +1,3 @@
-@use "sass:map";
-
 // Base Colors
 $white: #ffffff;
 $black: #000000;
@@ -53,23 +51,7 @@ $violet-700: #6d28d9;
 
 
 
-$primary-light-gradient: linear-gradient(
-		135deg,
-		$pink-500,
-		$violet-600
-	);
-$primary-light-hover-gradient: linear-gradient(
-		135deg,
-		$pink-600,
-		$violet-700
-	);
-$primary-dark-gradient: linear-gradient(
-		135deg,
-		$blue-600,
-		$purple-700
-	);
-$primary-dark-hover-gradient: linear-gradient(
-		135deg,
-		$blue-700,
-		$purple-700
-	);
+$primary-light-gradient: linear-gradient(135deg,$pink-500,$violet-600);
+$primary-light-hover-gradient: linear-gradient(135deg,$pink-600,$violet-700);
+$primary-dark-gradient: linear-gradient(135deg,$blue-600,$purple-700);
+$primary-dark-hover-gradient: linear-gradient(135deg,$blue-700,$purple-700);
