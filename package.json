@@ -17,7 +17,8 @@
 		"test:ui": "vitest --ui",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build",
-		"generate-scss-types": "typed-scss-modules src --watch"
+		"generate-scss-types": "typed-scss-modules src --watch",
+		"chromatic": "env-cmd -f .env.local npx chromatic --exit-zero-on-changes --project-token=$CHROMATIC_PROJECT_TOKEN"
 	},
 	"dependencies": {
 		"@types/node": "^24.0.4",
@@ -45,6 +46,8 @@
 		"@vitejs/plugin-react": "^4.4.1",
 		"@vitest/browser": "3.2.4",
 		"@vitest/coverage-v8": "3.2.4",
+		"chromatic": "^13.0.1",
+		"env-cmd": "^10.1.0",
 		"eslint": "^9.25.0",
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
