@@ -47,5 +47,10 @@ jobs:
             - name: Run unit tests
               run: yarn run test:unit
 
+            - name: Run Chromatic
+              uses: chromaui/action@latest
+              with:
+                  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
             - name: Run storybook tests
               run: yarn run test:storybook
