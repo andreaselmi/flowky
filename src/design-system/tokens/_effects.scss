@@ -12,18 +12,9 @@ $transition-normal: 300ms ease-in-out;
 $transition-slow: 500ms ease-in-out;
 $transition-theme: 700ms ease-in-out;
 
-// Backward compatibility map (keep if needed for existing iterations)
-$effects: (
-	// Backdrop Blur
-	backdrop-blur-xs: $backdrop-blur-xs,
-	backdrop-blur-hover: $backdrop-blur-hover,
-	// Scale Transforms
-	scale-active: $scale-active,
-	scale-hover: $scale-hover,
-
-	// Transitions
-	transition-fast: $transition-fast,
-	transition-normal: $transition-normal,
-	transition-slow: $transition-slow,
-	transition-theme: $transition-theme
-);
+// Backdrop Blur
+$backdrop-blur-xs: $backdrop-blur-xs;
+$backdrop-blur-hover: $backdrop-blur-hover;
+// Scale Transforms
+$scale-active: $scale-active;
+$scale-hover: $scale-hover;

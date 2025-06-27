@@ -18,7 +18,7 @@
 	@include button-base;
 	@include glass-morphism;
 
-	padding: space(3);
+	padding: $space-4;
 	display: flex;
 	align-items: center;
 	justify-content: center;

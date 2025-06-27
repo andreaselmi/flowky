@@ -1,5 +1,4 @@
 @use "../../design-system/mixins/typography" as *;
-@use "../../design-system/functions/helpers" as *;
 @use "../../design-system/tokens/colors" as *;
 
 .display,
@@ -12,7 +11,7 @@
 .body,
 .bodyLarge,
 .bodySmall {
-	color: $white;
+	color: var(--color-text-primary);
 }
 
 .display { 
