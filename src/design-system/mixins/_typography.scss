@@ -118,14 +118,6 @@
   letter-spacing: typo('letter-spacing-normal');
 }
 
-@mixin typography-label {
-  @include font-primary;
-  font-size: typo('font-size-xs');
-  font-weight: typo('font-weight-medium');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-normal');
-}
-
 // ===================================
 // UI ELEMENTS
 // ===================================

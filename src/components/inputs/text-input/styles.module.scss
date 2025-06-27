@@ -1,6 +1,7 @@
 @use "../../../design-system/mixins/base" as *;
 @use "../../../design-system/mixins/effects" as *;
 @use "../../../design-system/mixins/typography" as *;
+@use "../../../design-system/mixins/base" as *;
 @use "../../../design-system/functions/helpers" as *;
 
 .container {
@@ -11,7 +12,7 @@
 	color: var(--color-text-primary);
 
 	.label {
-		font-weight: 600;
+		font-weight: 500;
 	}
 	
 	.textInput {
