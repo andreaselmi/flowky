@@ -1,17 +1,15 @@
 $effects: (
 	// Backdrop Blur
-	backdrop-blur-sm: blur(4px),
-	backdrop-blur-md: blur(8px),
-	backdrop-blur-lg: blur(16px),
-	backdrop-blur-xl: blur(24px),
+	backdrop-blur-xs: blur(1px) saturate(150%),
+	backdrop-blur-hover: blur(10px) saturate(180%),
 	// Scale Transforms
+	scale-active: 0.98,
 	scale-hover: 1.02,
-	scale-card-hover: 1.05,
 
 	// TODO: paused for now
-	// // Transitions
-	// transition-fast: 200ms ease-in-out,
-	// transition-normal: 300ms ease-in-out,
-	// transition-slow: 500ms ease-in-out,
-	// transition-theme: 700ms ease-in-out
+	// Transitions
+	transition-fast: 200ms ease-in-out,
+	transition-normal: 300ms ease-in-out,
+	transition-slow: 500ms ease-in-out,
+	transition-theme: 700ms ease-in-out
 );

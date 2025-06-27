@@ -2,18 +2,19 @@ import { Plus } from "lucide-react";
 
 import Button from "@/components/buttons/button";
 import TextInput from "@/components/inputs/text-input";
+import ToggleThemeButton from "@/components/toggle-theme-button";
 import { useTheme } from "@/context/theme";
 
 import styles from "./styles.module.scss";
 
 const Home = () => {
-	const { toggleTheme } = useTheme();
+	const { toggleTheme, theme } = useTheme();
 
 	return (
 		<div className={styles.home}>
 			<Button
 				onClick={toggleTheme}
-				variant="primary"
+				variant="secondary"
 				icon={<Plus size={16} />}
 				style={{ marginBottom: "2rem" }}
 			>
@@ -28,10 +29,10 @@ const Home = () => {
 					placeholder="Inserisci un valore"
 				/>
 			</div>
-			{/* <ToggleThemeButton
+			<ToggleThemeButton
 				onClick={toggleTheme}
 				isDarkMode={theme === "dark"}
-			/> */}
+			/>
 		</div>
 	);
 };

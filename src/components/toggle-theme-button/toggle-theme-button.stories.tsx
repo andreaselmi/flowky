@@ -33,7 +33,7 @@ export const Dark: Story = {
 	decorators: [
 		Story => (
 			<div className="storybook-dark-container">
-				<Story args={{ style: { transform: `rotate(180deg)` } }} />
+				<Story />
 			</div>
 		),
 	],

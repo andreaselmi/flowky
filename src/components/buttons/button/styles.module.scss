@@ -25,9 +25,5 @@
 		&:hover {
 			@include glass-morphism-button-hover;
 		}
-
-		&:active {
-			transform: scale(0.98) translateY(0);
-		}
 	}
 }
