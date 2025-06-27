@@ -1,25 +1,28 @@
 @use "../../../design-system/mixins/base" as *;
 @use "../../../design-system/mixins/effects" as *;
 @use "../../../design-system/mixins/typography" as *;
-@use "../../../design-system/functions/helpers" as *;
+@use "../../../design-system/tokens/spacing" as *;
 
 .container {
 	@include font-primary;
 	display: flex;
 	flex-direction: column;
-	gap: space(3);
-	color: var(--color-text-primary);
+	gap: $space-3;
 
 	.label {
-		font-weight: 600;
+		font-weight: 500;
 	}
 	
 	.textInput {
 		@include glass-morphism;
-		background-color: var(--color-background-input);
-	
-		border-radius: radius(2xl);
-		padding: space(4);
+		width: 100%;
+		min-width: 200px;
+		border-radius: $radius-2xl;
+		padding: $space-4;
+
+		&:hover {
+			@include glass-morphism-button-hover;
+		}
 
 		&::placeholder {
 			color: var(--color-text-secondary);

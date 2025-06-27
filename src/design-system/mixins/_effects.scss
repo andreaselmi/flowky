@@ -4,15 +4,15 @@
 
 @mixin glass-morphism {
 	background: var(--color-background-card);
-	backdrop-filter: effect("backdrop-blur-xs");
-	-webkit-backdrop-filter: effect("backdrop-blur-xs"); // Safari support
+	backdrop-filter: $backdrop-blur-xs;
+	-webkit-backdrop-filter: $backdrop-blur-xs; // Safari support
 	border: 1px solid var(--color-border-card);
 	color: var(--color-text-primary);
 }
 
 @mixin glass-morphism-button-hover {
 	background: var(--color-background-card-hover);
-	backdrop-filter: effect("backdrop-blur-hover");
-	-webkit-backdrop-filter: effect("backdrop-blur-hover");
+	backdrop-filter: $backdrop-blur-hover;
+	-webkit-backdrop-filter: $backdrop-blur-hover;
 	border-color: var(--color-border-card-hover);
 } 

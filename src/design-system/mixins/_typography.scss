@@ -4,18 +4,17 @@
 @use "sass:map";
 @use "../tokens/typography" as *;
 @use "../tokens/layout" as *;
-@use "../functions/helpers" as *;
 
 // ===================================
 // BASE TYPOGRAPHY MIXINS
 // ===================================
 
 @mixin font-primary {
-  font-family: typo('font-family-primary');
+  font-family: $font-family-primary;
 }
 
 @mixin font-mono {
-  font-family: typo('font-family-mono');
+  font-family: $font-family-mono;
 }
 
 // ===================================
@@ -24,10 +23,10 @@
 
 @mixin typography-display {
   @include font-primary;
-  font-size: typo('font-size-4xl');
-  font-weight: typo('font-weight-bold');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-tight');
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
   
   @media (max-width: map.get($breakpoints, "md")) {
     font-size: 1.75rem; // 28px
@@ -36,10 +35,10 @@
 
 @mixin typography-h1 {
   @include font-primary;
-  font-size: typo('font-size-3xl');
-  font-weight: typo('font-weight-bold');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-tight');
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
   
   @media (max-width: map.get($breakpoints, "md")) {
     font-size: 1.5rem; // 24px
@@ -48,10 +47,10 @@
 
 @mixin typography-h2 {
   @include font-primary;
-  font-size: typo('font-size-2xl');
-  font-weight: typo('font-weight-semibold');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-normal;
   
   @media (max-width: map.get($breakpoints, "md")) {
     font-size: 1.25rem; // 20px
@@ -60,34 +59,34 @@
 
 @mixin typography-h3 {
   @include font-primary;
-  font-size: typo('font-size-xl');
-  font-weight: typo('font-weight-semibold');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-normal;
 }
 
 @mixin typography-h4 {
   @include font-primary;
-  font-size: typo('font-size-lg');
-  font-weight: typo('font-weight-medium');
-  line-height: typo('line-height-normal');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 @mixin typography-h5 {
   @include font-primary;
-  font-size: typo('font-size-base');
-  font-weight: typo('font-weight-medium');
-  line-height: typo('line-height-normal');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 @mixin typography-h6 {
   @include font-primary;
-  font-size: typo('font-size-sm');
-  font-weight: typo('font-weight-medium');
-  line-height: typo('line-height-normal');
-  letter-spacing: typo('letter-spacing-wide');
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-wide;
 }
 
 // ===================================
@@ -96,34 +95,26 @@
 
 @mixin typography-body-large {
   @include font-primary;
-  font-size: typo('font-size-lg');
-  font-weight: typo('font-weight-normal');
-  line-height: typo('line-height-normal');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 @mixin typography-body {
   @include font-primary;
-  font-size: typo('font-size-base');
-  font-weight: typo('font-weight-normal');
-  line-height: typo('line-height-normal');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 @mixin typography-body-small {
   @include font-primary;
-  font-size: typo('font-size-sm');
-  font-weight: typo('font-weight-normal');
-  line-height: typo('line-height-normal');
-  letter-spacing: typo('letter-spacing-normal');
-}
-
-@mixin typography-label {
-  @include font-primary;
-  font-size: typo('font-size-xs');
-  font-weight: typo('font-weight-medium');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-normal');
+  font-size: $font-size-sm;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  letter-spacing: $letter-spacing-normal;
 }
 
 // ===================================
@@ -132,8 +123,8 @@
 
 @mixin typography-button {
   @include font-primary;
-  font-size: typo('font-size-base');
-  font-weight: typo('font-weight-semibold');
-  line-height: typo('line-height-tight');
-  letter-spacing: typo('letter-spacing-wide');
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-wide;
 }

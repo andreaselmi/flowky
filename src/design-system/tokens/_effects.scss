@@ -1,15 +1,13 @@
-$effects: (
-	// Backdrop Blur
-	backdrop-blur-xs: blur(1px) saturate(150%),
-	backdrop-blur-hover: blur(10px) saturate(180%),
-	// Scale Transforms
-	scale-active: 0.98,
-	scale-hover: 1.02,
+// Backdrop Blur Variables
+$backdrop-blur-xs: blur(1px) saturate(150%);
+$backdrop-blur-hover: blur(10px) saturate(180%);
 
-	// TODO: paused for now
-	// Transitions
-	transition-fast: 200ms ease-in-out,
-	transition-normal: 300ms ease-in-out,
-	transition-slow: 500ms ease-in-out,
-	transition-theme: 700ms ease-in-out
-);
+// Scale Transform Variables
+$scale-active: 0.98;
+$scale-hover: 1.02;
+
+// Transition Variables
+$transition-fast: 200ms ease-in-out;
+$transition-normal: 300ms ease-in-out;
+$transition-slow: 500ms ease-in-out;
+$transition-theme: 700ms ease-in-out;

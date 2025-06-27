@@ -1,76 +1,57 @@
-@use "sass:map";
+// Base Colors
+$white: #ffffff;
+$black: #000000;
 
-$palette: (
-	// Base Colors
-	white: #ffffff,
-	black: #000000,
+// White alpha variants
+$white-alpha-5: rgba(255, 255, 255, 0.05);
+$white-alpha-10: rgba(255, 255, 255, 0.1);
+$white-alpha-15: rgba(255, 255, 255, 0.15);
+$white-alpha-20: rgba(255, 255, 255, 0.2);
+$white-alpha-30: rgba(255, 255, 255, 0.3);
+$white-alpha-40: rgba(255, 255, 255, 0.4);
+$white-alpha-60: rgba(255, 255, 255, 0.6);
+$white-alpha-70: rgba(255, 255, 255, 0.7);
+$white-alpha-80: rgba(255, 255, 255, 0.8);
 
-	// White alpha variants
-	white-alpha-5: rgba(255, 255, 255, 0.05),
-	white-alpha-10: rgba(255, 255, 255, 0.1),
-	white-alpha-15: rgba(255, 255, 255, 0.15),
-	white-alpha-20: rgba(255, 255, 255, 0.2),
-	white-alpha-30: rgba(255, 255, 255, 0.3),
-	white-alpha-40: rgba(255, 255, 255, 0.4),
-	white-alpha-60: rgba(255, 255, 255, 0.6),
-	white-alpha-70: rgba(255, 255, 255, 0.7),
-	white-alpha-80: rgba(255, 255, 255, 0.8),
-	// Grays (for light mode borders & text)
-	gray-50: #fafafa,
-	gray-100: #f5f5f5,
-	gray-200: #e5e5e5,
-	gray-300: #d4d4d4,
-	gray-400: #a3a3a3,
-	gray-500: #737373,
-	gray-600: #525252,
-	gray-700: #404040,
-	gray-800: #262626,
-	gray-900: #171717,
+// Grays (for light mode borders & text)
+$gray-50: #fafafa;
+$gray-100: #f5f5f5;
+$gray-200: #e5e5e5;
+$gray-300: #d4d4d4;
+$gray-400: #a3a3a3;
+$gray-500: #737373;
+$gray-600: #525252;
+$gray-700: #404040;
+$gray-800: #262626;
+$gray-900: #171717;
 
-	// Dark Mode Background
-	slate-800: #1e293b,
-	slate-900: #0f172a,
+// Dark Mode Background
+$slate-800: #1e293b;
+$slate-900: #0f172a;
 
-	// Activity Colors
-	red-500: #ef4444,
-	red-600: #dc2626,
-	emerald-500: #10b981,
-	emerald-600: #059669,
-	blue-500: #3b82f6,
-	blue-600: #2563eb,
-	blue-700: #1d4ed8,
-	purple-500: #a855f7,
-	purple-600: #9333ea,
-	purple-700: #7c3aed,
-	amber-500: #f59e0b,
-	amber-600: #d97706,
+// Activity Colors
+$red-500: #ef4444;
+$red-600: #dc2626;
+$emerald-500: #10b981;
+$emerald-600: #059669;
+$blue-500: #3b82f6;
+$blue-600: #2563eb;
+$blue-700: #1d4ed8;
+$purple-500: #a855f7;
+$purple-600: #9333ea;
+$purple-700: #7c3aed;
+$amber-500: #f59e0b;
+$amber-600: #d97706;
 
-	// Gradient Colors
-	pink-500: #ec4899,
-	pink-600: #db2777,
-	violet-600: #7c3aed,
-	violet-700: #6d28d9
-);
+// Gradient Colors
+$pink-500: #ec4899;
+$pink-600: #db2777;
+$violet-600: #7c3aed;
+$violet-700: #6d28d9;
 
-$gradients: (
-	primary-light: linear-gradient(
-			135deg,
-			map.get($palette, pink-500),
-			map.get($palette, violet-600)
-		),
-	primary-light-hover: linear-gradient(
-			135deg,
-			map.get($palette, pink-600),
-			map.get($palette, violet-700)
-		),
-	primary-dark: linear-gradient(
-			135deg,
-			map.get($palette, blue-600),
-			map.get($palette, purple-700)
-		),
-	primary-dark-hover: linear-gradient(
-			135deg,
-			map.get($palette, blue-700),
-			map.get($palette, purple-700)
-		),
-);
+
+
+$primary-light-gradient: linear-gradient(135deg,$pink-500,$violet-600);
+$primary-light-hover-gradient: linear-gradient(135deg,$pink-600,$violet-700);
+$primary-dark-gradient: linear-gradient(135deg,$blue-600,$purple-700);
+$primary-dark-hover-gradient: linear-gradient(135deg,$blue-700,$purple-700);

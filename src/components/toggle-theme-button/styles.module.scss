@@ -1,12 +1,24 @@
 @use "../../design-system/mixins/base" as *;
 @use "../../design-system/mixins/effects" as *;
-@use "../../design-system/functions/helpers" as *;
+@use "../../design-system/tokens/spacing" as *;
+
+.toggleThemeButton {
+	@include glass-morphism;
+	border-radius: 50%;
+	padding: $space-3;
+	cursor: pointer;
+	aspect-ratio: 1;
+
+	&:hover {
+		@include glass-morphism-button-hover;
+	}
+}
 
 .iconButton {
 	@include button-base;
 	@include glass-morphism;
 
-	padding: space(3);
+	padding: $space-4;
 	display: flex;
 	align-items: center;
 	justify-content: center;

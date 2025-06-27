@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import type { InputHTMLAttributes } from "react";
 
+import Typography from "@/components/typography";
+
 import styles from "./styles.module.scss";
 
 interface BaseProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "id"> {
@@ -35,12 +37,14 @@ const TextInput = ({
 	return (
 		<div className={styles.container}>
 			{label && (
-				<label
+				<Typography
+					variant="bodySmall"
+					component="label"
 					htmlFor={id}
 					className={clsx(styles.label, labelClassName)}
 				>
 					{label}
-				</label>
+				</Typography>
 			)}
 			<input
 				id={id}

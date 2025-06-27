@@ -1,0 +1,56 @@
+@use "../../design-system/mixins/typography" as *;
+@use "../../design-system/tokens/colors" as *;
+
+.display,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.body,
+.bodyLarge,
+.bodySmall {
+	color: var(--color-text-primary);
+}
+
+.display { 
+	@include typography-display; 
+}
+
+.h1 { 
+	@include typography-h1; 
+}
+
+.h2 {
+	 @include typography-h2; 
+}
+
+.h3 { 
+	@include typography-h3; 
+}
+
+.h4 { 
+	@include typography-h4; 
+}
+
+.h5 { 
+	@include typography-h5; 
+}
+
+.h6 { 
+	@include typography-h6; 
+}
+
+.bodyLarge { 
+	@include typography-body-large; 
+}
+
+.body { 
+	@include typography-body; 
+}
+
+.bodySmall { 
+	@include typography-body-small; 
+}
+

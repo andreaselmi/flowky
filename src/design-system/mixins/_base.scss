@@ -1,23 +1,23 @@
 @use "sass:map";
 @use "../tokens/colors" as *;
 @use "../tokens/spacing" as *;
-@use "../functions/helpers" as *;
+@use "../tokens/effects" as *;
 @use "../tokens/layout" as *;
 @use "./typography" as *;
 
 @mixin button-base {
 	@include typography-button;
-	border-radius: radius(2xl);
-	padding: space(4) space(8);
+	border-radius: $radius-2xl;
+	padding: $space-4 $space-8;
 	cursor: pointer;
-	transition: effect("transition-normal");
+	transition: $transition-normal;
 
 	&:hover {
-		transform: scale(effect("scale-hover"));
+		transform: scale($scale-hover);
 	}
 
 	&:active {
-		transform: scale(effect("scale-active"));
+		transform: scale($scale-active);
 	}
 }
 
