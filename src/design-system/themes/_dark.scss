@@ -1,29 +1,29 @@
 @use "../tokens/colors" as *;
-@use "../functions/helpers" as *;
+@use "../tokens/theme-tokens" as tokens;
 @use "sass:map";
 
 $dark-theme: (
 	// Backgrounds
-	background-primary: linear-gradient(
+	#{tokens.$TOKEN_BG_PRIMARY}: linear-gradient(
 			135deg,
 			#111827 0%,
 			#1e293b 50%,
 			#111827 100%
 		),
 	
-	background-card: color(white-alpha-5),
-	background-card-hover: color(white-alpha-10),
+	#{tokens.$TOKEN_BG_CARD}: $white-alpha-5,
+	#{tokens.$TOKEN_BG_CARD_HOVER}: $white-alpha-10,
 
-	background-input: color(white-alpha-20),
+	#{tokens.$TOKEN_BG_INPUT}: $white-alpha-20,
 
 	// Borders
-	border-card: color(white-alpha-20),
-	border-card-hover: color(white-alpha-30),
+	#{tokens.$TOKEN_BORDER_CARD}: $white-alpha-20,
+	#{tokens.$TOKEN_BORDER_CARD_HOVER}: $white-alpha-30,
 	// Text
-	text-primary: color(white),
-	text-secondary: color(gray-200),
+	#{tokens.$TOKEN_TEXT_PRIMARY}: $white,
+	#{tokens.$TOKEN_TEXT_SECONDARY}: $gray-200,
 
 	// Gradients
-	gradient-primary: map.get($gradients, primary-dark),
-	gradient-primary-hover: map.get($gradients, primary-dark-hover),
+	#{tokens.$TOKEN_GRADIENT_PRIMARY}: $primary-dark-gradient,
+	#{tokens.$TOKEN_GRADIENT_PRIMARY_HOVER}: $primary-dark-hover-gradient,
 );

@@ -35,7 +35,7 @@ const Home = () => {
 
 			<Button
 				onClick={toggleTheme}
-				variant="secondary"
+				variant="primary"
 				icon={<Plus size={16} />}
 				style={{ marginBottom: "2rem" }}
 			>

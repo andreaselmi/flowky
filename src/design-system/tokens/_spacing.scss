@@ -1,28 +1,56 @@
+// Spacing Variables
+$space-0: 0;
+$space-1: 0.25rem; // 4px
+$space-2: 0.5rem; // 8px
+$space-3: 0.75rem; // 12px
+$space-4: 1rem; // 16px
+$space-5: 1.25rem; // 20px
+$space-6: 1.5rem; // 24px
+$space-8: 2rem; // 32px
+$space-10: 2.5rem; // 40px
+$space-12: 3rem; // 48px
+$space-16: 4rem; // 64px
+$space-20: 5rem; // 80px
+$space-24: 6rem; // 96px
+$space-32: 8rem; // 128px
+
+// Border Radius Variables
+$radius-none: 0;
+$radius-sm: 0.125rem; // 2px
+$radius-default: 0.25rem; // 4px
+$radius-md: 0.375rem; // 6px
+$radius-lg: 0.5rem; // 8px
+$radius-xl: 0.75rem; // 12px
+$radius-2xl: 1rem; // 16px
+$radius-3xl: 1.5rem; // 24px
+$radius-full: 9999px; // Perfect circle
+
+// Backward compatibility maps (keep if needed for existing iterations)
 $spacing: (
-	0: 0,
-	1: 0.25rem, // 4px
-	2: 0.5rem, // 8px
-	3: 0.75rem, // 12px
-	4: 1rem, // 16px
-	5: 1.25rem, // 20px
-	6: 1.5rem, // 24px
-	8: 2rem, // 32px
-	10: 2.5rem, // 40px
-	12: 3rem, // 48px
-	16: 4rem, // 64px
-	20: 5rem, // 80px
-	24: 6rem, // 96px
-	32: 8rem, // 128px
+	0: $space-0,
+	1: $space-1,
+	2: $space-2,
+	3: $space-3,
+	4: $space-4,
+	5: $space-5,
+	6: $space-6,
+	8: $space-8,
+	10: $space-10,
+	12: $space-12,
+	16: $space-16,
+	20: $space-20,
+	24: $space-24,
+	32: $space-32,
 );
 
 $border-radius: (
-	none: 0,
-	sm: 0.125rem, // 2px
-	default: 0.25rem, // 4px
-	md: 0.375rem, // 6px
-	lg: 0.5rem, // 8px
-	xl: 0.75rem, // 12px
-	2xl: 1rem, // 16px
-	3xl: 1.5rem, // 24px
-	full: 9999px, // Perfect circle
+	none: $radius-none,
+	sm: $radius-sm,
+	default: $radius-default,
+	md: $radius-md,
+	lg: $radius-lg,
+	xl: $radius-xl,
+	2xl: $radius-2xl,
+	3xl: $radius-3xl,
+	full: $radius-full,
 );

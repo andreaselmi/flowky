@@ -1,41 +1,84 @@
+// Font Family Variables
+$font-family-primary: (
+	"Inter",
+	-apple-system,
+	BlinkMacSystemFont,
+	"Segoe UI",
+	Roboto,
+	"Helvetica Neue",
+	Arial,
+	sans-serif
+);
+
+$font-family-mono: (
+	"Fira Code",
+	"Monaco",
+	"Consolas",
+	"Liberation Mono",
+	"Courier New",
+	monospace
+);
+
+// Font Size Variables
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+
+// Line Height Variables
+$line-height-none: 1;        // Buttons, badges, metrics
+$line-height-tight: 1.2;     // Headings, titles
+$line-height-snug: 1.25;     // Subheadings, compact text
+$line-height-normal: 1.5;    // Body text
+$line-height-relaxed: 1.6;   // Long-form content
+$line-height-loose: 1.75;    // Very spaced content (rare)
+
+// Font Weight Variables
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Letter Spacing Variables
+$letter-spacing-tight: -0.025em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.025em;
+
+// Backward compatibility map (keep if needed for existing iterations)
 $typography: (
 	// Font Family
-	font-family-primary: (
-			"Inter",
-			-apple-system,
-			BlinkMacSystemFont,
-			"Segoe UI",
-			Roboto,
-			"Helvetica Neue",
-			Arial,
-			sans-serif
-		),
+	font-family-primary: $font-family-primary,
+	font-family-mono: $font-family-mono,
 	// Font Sizes
-	font-size-xs: 0.75rem, // 12px
-	font-size-sm: 0.875rem, // 14px
-	font-size-base: 1rem, // 16px
-	font-size-lg: 1.125rem, // 18px
-	font-size-xl: 1.25rem, // 20px
-	font-size-2xl: 1.5rem, // 24px
-	font-size-3xl: 1.875rem, // 30px
-	font-size-4xl: 2.25rem, // 36px
+	font-size-xs: $font-size-xs,
+	font-size-sm: $font-size-sm,
+	font-size-base: $font-size-base,
+	font-size-lg: $font-size-lg,
+	font-size-xl: $font-size-xl,
+	font-size-2xl: $font-size-2xl,
+	font-size-3xl: $font-size-3xl,
+	font-size-4xl: $font-size-4xl,
 
 	// Line Heights
-	line-height-none: 1,        // Buttons, badges, metrics
-	line-height-tight: 1.2,     // Headings, titles
-	line-height-snug: 1.25,     // Subheadings, compact text
-	line-height-normal: 1.5,    // Body text
-	line-height-relaxed: 1.6,   // Long-form content
-	line-height-loose: 1.75,    // Very spaced content (rare)	
+	line-height-none: $line-height-none,
+	line-height-tight: $line-height-tight,
+	line-height-snug: $line-height-snug,
+	line-height-normal: $line-height-normal,
+	line-height-relaxed: $line-height-relaxed,
+	line-height-loose: $line-height-loose,
 
 	// Font Weights
-	font-weight-normal: 400,
-	font-weight-medium: 500,
-	font-weight-semibold: 600,
-	font-weight-bold: 700,
+	font-weight-normal: $font-weight-normal,
+	font-weight-medium: $font-weight-medium,
+	font-weight-semibold: $font-weight-semibold,
+	font-weight-bold: $font-weight-bold,
 
 	// Letter Spacing
-	letter-spacing-tight: -0.025em,
-	letter-spacing-normal: 0,
-	letter-spacing-wide: 0.025em
+	letter-spacing-tight: $letter-spacing-tight,
+	letter-spacing-normal: $letter-spacing-normal,
+	letter-spacing-wide: $letter-spacing-wide
 );
