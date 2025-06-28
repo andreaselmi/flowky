@@ -1,0 +1,39 @@
+@use "../tokens" as *;
+@use "./typography" as *;
+@use "./effects" as *;
+
+@mixin input-with-label {
+	@include font-primary;
+	display: flex;
+	flex-direction: column;
+	gap: $space-2;
+}
+
+@mixin text-input {
+	@include font-primary;
+	@include glass-morphism;
+	width: 100%;
+	min-width: 200px;
+	border-radius: $radius-2xl;
+	padding: $space-4;
+
+	&::placeholder {
+		color: var(--color-text-secondary);
+	}
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type="number"] {
+		-moz-appearance: textfield;
+	}
+}
+
+@mixin input-disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
+}

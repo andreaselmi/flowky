@@ -2,9 +2,7 @@
 @use "design-system/tokens" as *;
 
 .container {
-	display: flex;
-	flex-direction: column;
-	gap: $space-3;
+	@include input-with-label;
 
 	.textArea {
 		@include text-input;
