@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
 
 import Button from "@/components/buttons/button";
+import Select from "@/components/inputs/select";
 import TextArea from "@/components/inputs/text-area";
 import TextInput from "@/components/inputs/text-input";
 import ToggleThemeButton from "@/components/toggle-theme-button";
@@ -14,6 +15,16 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
+			<Select
+				label="Seleziona un'opzione"
+				id="select"
+				options={[
+					{ id: "1", label: "Opzione 1" },
+					{ id: "2", label: "Opzione 2" },
+					{ id: "3", label: "Opzione 3" },
+				]}
+				onChange={value => console.log(value)}
+			/>
 			<TextArea
 				label="Testo"
 				id="text"

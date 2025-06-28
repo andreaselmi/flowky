@@ -2,10 +2,7 @@
 @use "design-system/tokens/spacing" as *;
 
 .container {
-	@include font-primary;
-	display: flex;
-	flex-direction: column;
-	gap: $space-3;
+	@include input-with-label;
 	
 	.textInput {
 		@include text-input;

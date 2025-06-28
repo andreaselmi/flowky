@@ -1,0 +1,9 @@
+@use "design-system/mixins" as *;
+
+.container {
+	@include input-with-label;
+
+	.select {
+		@include text-input;
+	}
+}
