@@ -1,5 +1,5 @@
-@use "../src/design-system/mixins/theme" as *;
-@use "../src/design-system/themes/dark" as *;
+@use "design-system/mixins" as *;
+@use "design-system/themes/dark" as *;
 
 .storybook-dark-container {
 	background: var(--color-background-primary);

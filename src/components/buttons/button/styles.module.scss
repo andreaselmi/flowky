@@ -1,7 +1,5 @@
-@use "../../../design-system/mixins/base" as *;
-@use "../../../design-system/mixins/effects" as *;
-@use "../../../design-system/tokens/colors" as *;
-@use "../../../design-system/tokens/spacing" as *;
+@use "design-system/tokens" as *;
+@use "design-system/mixins" as *;
 
 .button {
 	@include button-base;

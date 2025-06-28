@@ -4,6 +4,8 @@
 @use "../tokens/effects" as *;
 @use "../tokens/layout" as *;
 @use "./typography" as *;
+@use "./effects" as *;
+@use "./typography" as *;
 
 @mixin button-base {
 	@include typography-button;
@@ -19,6 +21,39 @@
 	&:active {
 		transform: scale($scale-active);
 	}
+}
+
+@mixin text-input {
+	@include font-primary;
+	@include glass-morphism;
+	width: 100%;
+	min-width: 200px;
+	border-radius: $radius-2xl;
+	padding: $space-4;
+
+	&:hover {
+		@include glass-morphism-button-hover;
+	}
+
+	&::placeholder {
+		color: var(--color-text-secondary);
+	}
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	&[type="number"] {
+		-moz-appearance: textfield;
+	}
+}
+
+@mixin input-disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+	pointer-events: none;
 }
 
 

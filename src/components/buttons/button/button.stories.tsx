@@ -4,7 +4,7 @@ import Button from ".";
 
 const meta = {
 	component: Button,
-	title: "Button",
+	title: "Design-System/Buttons/Button",
 	tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
 

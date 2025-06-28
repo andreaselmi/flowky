@@ -28,6 +28,14 @@ export default defineConfig({
 		}),
 		tsconfigPaths(),
 	],
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: "modern-compiler",
+				loadPaths: ["src", "src/design-system"],
+			},
+		},
+	},
 	test: {
 		globals: true,
 		environment: "jsdom",

@@ -1,2 +1,2 @@
 export declare const container: string;
-export declare const textInput: string;
+export declare const textArea: string;

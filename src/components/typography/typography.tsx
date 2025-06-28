@@ -33,7 +33,7 @@ interface BaseTypographyProps {
 	children?: React.ReactNode;
 }
 
-type TypographyProps<C extends ElementType> = BaseTypographyProps & {
+export type TypographyProps<C extends ElementType> = BaseTypographyProps & {
 	component?: C;
 } & Omit<ComponentProps<C>, keyof BaseTypographyProps>;
 

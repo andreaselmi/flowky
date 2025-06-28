@@ -1,14 +1,14 @@
 @use "design-system/mixins" as *;
-@use "design-system/tokens/spacing" as *;
+@use "design-system/tokens" as *;
 
 .container {
-	@include font-primary;
 	display: flex;
 	flex-direction: column;
 	gap: $space-3;
-	
-	.textInput {
+
+	.textArea {
 		@include text-input;
+		min-height: 6.25rem; // 100px
 
 		&:disabled {
 			@include input-disabled;
