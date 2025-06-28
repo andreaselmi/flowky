@@ -1,0 +1,45 @@
+@use "design-system/mixins" as *;
+@use "design-system/tokens" as *;
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: $backdrop-blur-lg;
+	z-index: 1000;
+	display: grid;
+	place-items: center;
+
+	.dialog {
+		@include glass-morphism;
+		border: none;
+		width: 100%;
+		max-width: 31.25rem;
+		padding: $space-4;
+		border-radius: $border-radius-xl;
+
+
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: $space-4;
+
+			.title {
+				@include typography-h2;
+			}
+
+			.close {
+				background: none;
+				border: none;
+				cursor: pointer;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $error-600;
+			}
+		}
+	}
+}

@@ -1,5 +1,10 @@
 // Backdrop Blur Variables
 $backdrop-blur-xs: blur(1px) saturate(150%);
+$backdrop-blur-sm: blur(2px) saturate(150%);
+$backdrop-blur-md: blur(4px) saturate(150%);
+$backdrop-blur-lg: blur(8px) saturate(150%);
+$backdrop-blur-xl: blur(16px) saturate(150%);
+$backdrop-blur-2xl: blur(32px) saturate(150%);
 $backdrop-blur-hover: blur(10px) saturate(180%);
 
 // Scale Transform Variables
