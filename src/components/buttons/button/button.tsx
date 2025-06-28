@@ -15,11 +15,12 @@ const Button = ({
 	icon: Icon,
 	onClick,
 	variant = "primary",
+	className,
 	...restProps
 }: ButtonProps) => {
 	return (
 		<button
-			className={clsx(styles.button, styles[variant])}
+			className={clsx(styles.button, styles[variant], className)}
 			onClick={onClick}
 			{...restProps}
 		>

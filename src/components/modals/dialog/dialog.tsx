@@ -27,7 +27,7 @@ const Dialog = ({
 						{title && <h2 className={styles.title}>{title}</h2>}
 						{showCloseIcon && (
 							<button className={styles.close} onClick={onClose}>
-								<X />
+								<X size={20} />
 							</button>
 						)}
 					</div>

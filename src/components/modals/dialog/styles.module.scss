@@ -32,13 +32,15 @@
 			}
 
 			.close {
-				background: none;
-				border: none;
+				background: $white-alpha-30;
+				padding: $space-2;
+				border-radius: $border-radius-md;
+				border: 1px solid $white-alpha-30;
 				cursor: pointer;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				color: $error-600;
+				color: var(--color-text-primary);
 			}
 		}
 	}
