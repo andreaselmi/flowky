@@ -1,11 +1,7 @@
 @use "sass:map";
-@use "../tokens/colors" as *;
-@use "../tokens/spacing" as *;
-@use "../tokens/effects" as *;
-@use "../tokens/layout" as *;
+@use "../tokens" as *;
 @use "./typography" as *;
 @use "./effects" as *;
-@use "./typography" as *;
 
 @mixin button-base {
 	@include typography-button;
