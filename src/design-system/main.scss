@@ -2,7 +2,7 @@
 @use "themes/dark" as *;
 
 @use "sass:map";
-@use "mixins/theme" as *;
+@use "mixins" as *;
 
 // Default: light theme
 :root {

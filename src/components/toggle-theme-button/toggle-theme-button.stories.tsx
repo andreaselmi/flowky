@@ -4,7 +4,7 @@ import ToggleThemeButton from "./toggle-theme-button";
 
 const meta = {
 	component: ToggleThemeButton,
-	title: "ToggleThemeButton",
+	title: "Design-System/Buttons/ToggleThemeButton",
 	tags: ["autodocs"],
 } satisfies Meta<typeof ToggleThemeButton>;
 

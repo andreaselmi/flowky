@@ -1,6 +1,7 @@
 import { Plus } from "lucide-react";
 
 import Button from "@/components/buttons/button";
+import TextArea from "@/components/inputs/text-area";
 import TextInput from "@/components/inputs/text-input";
 import ToggleThemeButton from "@/components/toggle-theme-button";
 import Typography from "@/components/typography";
@@ -13,6 +14,11 @@ const Home = () => {
 
 	return (
 		<div className={styles.home}>
+			<TextArea
+				label="Testo"
+				id="text"
+				placeholder="Inserisci un testo"
+			/>
 			<Typography variant="display">Hello World</Typography>
 
 			<Typography variant="h1">Hello World</Typography>
