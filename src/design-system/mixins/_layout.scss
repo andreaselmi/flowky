@@ -1,10 +1,11 @@
+@use "sass:meta";
 @use "../tokens" as *;
 
 @mixin respond-to($breakpoint) {
 	$value: null;
 	
 	// if the parameter is a string, check if it is a valid breakpoint
-	@if type-of($breakpoint) == string {
+	@if meta.type-of($breakpoint) == string {
 		@if map-has-key($breakpoints, $breakpoint) {
 			$value: map-get($breakpoints, $breakpoint);
 		} @else {
@@ -12,7 +13,7 @@
 		}
 	}
 	// if the parameter is a number, validate it
-	@else if type-of($breakpoint) == number {
+	@else if meta.type-of($breakpoint) == number {
 		@if unitless($breakpoint) {
 			@error "Breakpoint value '#{$breakpoint}' must have a unit (px, em, rem, etc.)";
 		} @else if $breakpoint <= 0 {
