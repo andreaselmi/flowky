@@ -4,6 +4,8 @@
 @use "sass:map";
 @use "../tokens/typography" as *;
 @use "../tokens/layout" as *;
+@use "../functions/layout" as *;
+@use "../mixins/layout" as *;
 
 // ===================================
 // BASE TYPOGRAPHY MIXINS
@@ -27,8 +29,8 @@
   font-weight: $font-weight-bold;
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-tight;
-  
-  @media (max-width: map.get($breakpoints, "md")) {
+
+  @include respond-to(get-breakpoint("md")) {
     font-size: 1.75rem; // 28px
   }
 }
@@ -40,7 +42,7 @@
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-tight;
   
-  @media (max-width: map.get($breakpoints, "md")) {
+  @include respond-to(get-breakpoint("md")) {
     font-size: 1.5rem; // 24px
   }
 }
@@ -52,7 +54,7 @@
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-normal;
   
-  @media (max-width: map.get($breakpoints, "md")) {
+  @include respond-to(get-breakpoint("md")) {
     font-size: 1.25rem; // 20px
   }
 }

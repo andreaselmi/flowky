@@ -1,9 +1,11 @@
 import { Plus } from "lucide-react";
+import { useState } from "react";
 
 import Button from "@/components/buttons/button";
 import Select from "@/components/inputs/select";
 import TextArea from "@/components/inputs/text-area";
 import TextInput from "@/components/inputs/text-input";
+import Dialog from "@/components/modals/dialog";
 import ToggleThemeButton from "@/components/toggle-theme-button";
 import Typography from "@/components/typography";
 import { useTheme } from "@/context/theme";
@@ -12,6 +14,7 @@ import styles from "./styles.module.scss";
 
 const Home = () => {
 	const { toggleTheme, theme } = useTheme();
+	const [isDialogOpen, setIsDialogOpen] = useState(false);
 
 	return (
 		<div className={styles.home}>
@@ -30,7 +33,9 @@ const Home = () => {
 				id="text"
 				placeholder="Inserisci un testo"
 			/>
-			<Typography variant="display">Hello World</Typography>
+			<Typography role="status" variant="display">
+				Hello World
+			</Typography>
 
 			<Typography variant="h1">Hello World</Typography>
 
@@ -71,6 +76,20 @@ const Home = () => {
 				onClick={toggleTheme}
 				isDarkMode={theme === "dark"}
 			/>
+
+			<Button variant="secondary" onClick={() => setIsDialogOpen(true)}>
+				Open Dialog
+			</Button>
+
+			{isDialogOpen && (
+				<Dialog
+					isOpen={isDialogOpen}
+					setIsOpen={() => setIsDialogOpen(false)}
+					title="Dialog Title"
+				>
+					<p>Dialog Content</p>
+				</Dialog>
+			)}
 		</div>
 	);
 };

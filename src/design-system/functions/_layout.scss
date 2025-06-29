@@ -1,0 +1,6 @@
+@use "sass:map";
+@use "../tokens/layout" as *;
+
+@function get-breakpoint($breakpoint) {
+	@return map.get($breakpoints, $breakpoint);
+}

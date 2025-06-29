@@ -42,12 +42,20 @@ const Typography = <C extends ElementType = "p">({
 	children,
 	component,
 	className,
+	role,
 	...restProps
 }: TypographyProps<C>) => {
-	const Component = component || defaultElementMapping[variant];
+	const Component =
+		role === "status"
+			? "output"
+			: component || defaultElementMapping[variant];
 
 	return (
-		<Component className={clsx(styles[variant], className)} {...restProps}>
+		<Component
+			className={clsx(styles[variant], className)}
+			{...(role !== "status" && { role })}
+			{...restProps}
+		>
 			{children}
 		</Component>
 	);
