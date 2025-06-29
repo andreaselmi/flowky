@@ -12,7 +12,7 @@ function safelyShowModal(dialog: HTMLDialogElement | null) {
 interface DialogProps extends React.HTMLAttributes<HTMLDialogElement> {
 	isOpen: boolean;
 	setIsOpen: (isOpen: boolean) => void;
-	title: string;
+	title?: string;
 	children: React.ReactNode;
 	showCloseIcon?: boolean;
 	closeOnClickOutside?: boolean;
