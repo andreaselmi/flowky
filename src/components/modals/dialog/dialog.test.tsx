@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -280,6 +280,222 @@ describe("Dialog", () => {
 			closeButton.focus();
 
 			await user.keyboard(" ");
+			expect(handleClose).toHaveBeenCalledWith(false);
+		});
+
+		it("should close dialog when Escape key is pressed", async () => {
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+				>
+					<p>Content</p>
+				</Dialog>
+			);
+
+			const dialog = screen.getByRole("dialog");
+			fireEvent.keyDown(dialog, {
+				key: "Escape",
+				code: "Escape",
+			});
+			expect(handleClose).toHaveBeenCalledWith(false);
+		});
+
+		it("should close dialog when Escape key is pressed from any focused element inside", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Form Dialog"
+				>
+					<form>
+						<label htmlFor="username">Username</label>
+						<input id="username" type="text" />
+						<button type="submit">Submit</button>
+					</form>
+				</Dialog>
+			);
+
+			const input = screen.getByLabelText("Username");
+			await user.click(input);
+
+			await user.keyboard("{Escape}");
+			expect(handleClose).toHaveBeenCalledWith(false);
+		});
+
+		it("should not close dialog on other key presses", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+				>
+					<input type="text" placeholder="Type here" />
+				</Dialog>
+			);
+
+			const input = screen.getByPlaceholderText("Type here");
+			await user.click(input);
+
+			await user.keyboard("{Enter}");
+			await user.keyboard("{Tab}");
+			await user.keyboard("a");
+			await user.keyboard("{Backspace}");
+
+			expect(handleClose).not.toHaveBeenCalled();
+		});
+	});
+
+	describe("Close on Click Outside", () => {
+		it("should close dialog when clicking on backdrop/outside dialog content", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+				>
+					<p>Dialog content</p>
+				</Dialog>
+			);
+
+			const dialog = screen.getByRole("dialog");
+
+			// Click directly on the dialog element (backdrop)
+			await user.click(dialog);
+			expect(handleClose).toHaveBeenCalledWith(false);
+		});
+
+		it("should not close dialog when clicking inside dialog content", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+				>
+					<div>
+						<p>Dialog content</p>
+						<button>Action</button>
+						<input type="text" placeholder="Type here" />
+					</div>
+				</Dialog>
+			);
+
+			// Click on various elements inside the dialog
+			await user.click(screen.getByText("Dialog content"));
+			await user.click(screen.getByRole("button", { name: "Action" }));
+			await user.click(screen.getByPlaceholderText("Type here"));
+
+			expect(handleClose).not.toHaveBeenCalled();
+		});
+
+		it("should not close dialog when closeOnClickOutside is false", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+					closeOnClickOutside={false}
+				>
+					<p>Dialog content</p>
+				</Dialog>
+			);
+
+			const dialog = screen.getByRole("dialog");
+
+			// Click on the backdrop - should not close
+			await user.click(dialog);
+			expect(handleClose).not.toHaveBeenCalled();
+		});
+
+		it("should still close with Escape key when closeOnClickOutside is false", async () => {
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+					closeOnClickOutside={false}
+				>
+					<p>Dialog content</p>
+				</Dialog>
+			);
+
+			const dialog = screen.getByRole("dialog");
+			fireEvent.keyDown(dialog, {
+				key: "Escape",
+				code: "Escape",
+			});
+			expect(handleClose).toHaveBeenCalledWith(false);
+		});
+
+		it("should handle multiple backdrop clicks correctly", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Test Dialog"
+				>
+					<p>Dialog content</p>
+				</Dialog>
+			);
+
+			const dialog = screen.getByRole("dialog");
+
+			// Multiple clicks on backdrop
+			await user.click(dialog);
+			await user.click(dialog);
+			await user.click(dialog);
+
+			expect(handleClose).toHaveBeenCalledTimes(3);
+			expect(handleClose).toHaveBeenCalledWith(false);
+		});
+
+		it("should work correctly in forms with validation errors", async () => {
+			const user = userEvent.setup();
+			const handleClose = vi.fn();
+			const handleSubmit = vi.fn(e => e.preventDefault());
+
+			render(
+				<Dialog
+					isOpen={true}
+					setIsOpen={handleClose}
+					title="Form Dialog"
+				>
+					<form onSubmit={handleSubmit}>
+						<label htmlFor="email">Email</label>
+						<input id="email" type="email" required />
+						<button type="submit">Submit</button>
+						<div role="alert">Email is required</div>
+					</form>
+				</Dialog>
+			);
+
+			const dialog = screen.getByRole("dialog");
+
+			// Should still close on backdrop click even with form content and alerts
+			await user.click(dialog);
 			expect(handleClose).toHaveBeenCalledWith(false);
 		});
 	});
