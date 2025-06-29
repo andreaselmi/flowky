@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Dialog>;
 export const Light: Story = {
 	args: {
 		isOpen: true,
-		onClose: () => {},
+		setIsOpen: () => {},
 		title: "Dialog Title",
 		children: <p>Dialog Content</p>,
 	},
@@ -31,7 +31,7 @@ export const Light: Story = {
 export const Dark: Story = {
 	args: {
 		isOpen: true,
-		onClose: () => {},
+		setIsOpen: () => {},
 		title: "Dialog Title",
 		children: <p>Dialog Content</p>,
 	},

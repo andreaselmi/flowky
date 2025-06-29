@@ -82,7 +82,7 @@ const Home = () => {
 			{isDialogOpen && (
 				<Dialog
 					isOpen={isDialogOpen}
-					onClose={() => setIsDialogOpen(false)}
+					setIsOpen={() => setIsDialogOpen(false)}
 					title="Dialog Title"
 				>
 					<p>Dialog Content</p>
