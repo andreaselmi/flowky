@@ -88,7 +88,6 @@ const Dialog = ({
 
 	return (
 		<dialog
-			role="dialog"
 			aria-modal="true"
 			aria-labelledby={title ? titleId : undefined}
 			ref={dialogRef}

@@ -33,7 +33,9 @@ const Home = () => {
 				id="text"
 				placeholder="Inserisci un testo"
 			/>
-			<Typography variant="display">Hello World</Typography>
+			<Typography role="status" variant="display">
+				Hello World
+			</Typography>
 
 			<Typography variant="h1">Hello World</Typography>
 
