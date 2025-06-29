@@ -280,6 +280,24 @@ describe("Typography", () => {
 			render(
 				<Typography
 					variant="body"
+					role="note"
+					aria-live="polite"
+					aria-label="Status message"
+				>
+					Important status update
+				</Typography>
+			);
+
+			const element = screen.getByText("Important status update");
+			expect(element).toHaveAttribute("role", "note");
+			expect(element.tagName).toBe("P");
+			expect(element).toHaveAttribute("aria-label", "Status message");
+		});
+
+		it("render output element when role is status", () => {
+			render(
+				<Typography
+					variant="body"
 					role="status"
 					aria-live="polite"
 					aria-label="Status message"
@@ -289,8 +307,8 @@ describe("Typography", () => {
 			);
 
 			const element = screen.getByText("Important status update");
-			expect(element).toHaveAttribute("role", "status");
-			expect(element).toHaveAttribute("aria-live", "polite");
+			expect(element).not.toHaveAttribute("role");
+			expect(element.tagName).toBe("OUTPUT");
 			expect(element).toHaveAttribute("aria-label", "Status message");
 		});
 	});
