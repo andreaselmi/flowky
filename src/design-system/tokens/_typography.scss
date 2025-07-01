@@ -47,38 +47,3 @@ $font-weight-bold: 700;
 $letter-spacing-tight: -0.025em;
 $letter-spacing-normal: 0;
 $letter-spacing-wide: 0.025em;
-
-// Backward compatibility map (keep if needed for existing iterations)
-$typography: (
-	// Font Family
-	font-family-primary: $font-family-primary,
-	font-family-mono: $font-family-mono,
-	// Font Sizes
-	font-size-xs: $font-size-xs,
-	font-size-sm: $font-size-sm,
-	font-size-base: $font-size-base,
-	font-size-lg: $font-size-lg,
-	font-size-xl: $font-size-xl,
-	font-size-2xl: $font-size-2xl,
-	font-size-3xl: $font-size-3xl,
-	font-size-4xl: $font-size-4xl,
-
-	// Line Heights
-	line-height-none: $line-height-none,
-	line-height-tight: $line-height-tight,
-	line-height-snug: $line-height-snug,
-	line-height-normal: $line-height-normal,
-	line-height-relaxed: $line-height-relaxed,
-	line-height-loose: $line-height-loose,
-
-	// Font Weights
-	font-weight-normal: $font-weight-normal,
-	font-weight-medium: $font-weight-medium,
-	font-weight-semibold: $font-weight-semibold,
-	font-weight-bold: $font-weight-bold,
-
-	// Letter Spacing
-	letter-spacing-tight: $letter-spacing-tight,
-	letter-spacing-normal: $letter-spacing-normal,
-	letter-spacing-wide: $letter-spacing-wide
-);

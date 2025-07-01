@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import ThemeWrapper from "../../../../.storybook/theme-wrapper";
 import Dialog from "./dialog";
 
 const meta: Meta<typeof Dialog> = {
 	title: "Design-System/Modals/Dialog",
 	component: Dialog,
-	tags: ["autodocs"],
 };
 
 export default meta;
@@ -21,9 +21,9 @@ export const Light: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-light-container">
+			<ThemeWrapper theme="light">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };
@@ -37,9 +37,9 @@ export const Dark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };

@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import ThemeWrapper from "../../../../.storybook/theme-wrapper";
 import TextArea from "./text-area";
 
 const meta = {
 	component: TextArea,
 	title: "Design-System/Forms/TextArea",
-	tags: ["autodocs"],
 } satisfies Meta<typeof TextArea>;
 
 export default meta;
@@ -17,6 +17,13 @@ export const Default: Story = {
 		id: "text-area",
 		placeholder: "Inserisci un testo",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const Resizable: Story = {
@@ -26,6 +33,13 @@ export const Resizable: Story = {
 		resize: "both",
 		placeholder: "Inserisci un testo",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const Disabled: Story = {
@@ -35,6 +49,13 @@ export const Disabled: Story = {
 		disabled: true,
 		placeholder: "Inserisci un testo",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const Dark: Story = {
@@ -45,9 +66,9 @@ export const Dark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };
@@ -61,9 +82,9 @@ export const DarkDisabled: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };

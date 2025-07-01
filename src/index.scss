@@ -1,1 +1,7 @@
-@use "./design-system/main.scss";
+@use "./design-system/tokens" as *;
+
+body {
+	background: var(--color-background-primary);
+	min-height: 100vh;
+	width: 100vw;
+}

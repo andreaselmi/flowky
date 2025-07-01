@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import ThemeWrapper from "../../../../.storybook/theme-wrapper";
 import Select from "./select";
 
 const meta = {
 	component: Select,
 	title: "Design-System/Forms/Select",
-	tags: ["autodocs"],
 } satisfies Meta<typeof Select>;
 
 export default meta;
@@ -22,6 +22,13 @@ export const Default: Story = {
 		],
 		onChange: () => {},
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const WithoutLabel: Story = {
@@ -45,6 +52,13 @@ export const WithoutLabel: Story = {
 		],
 		onChange: () => {},
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const Disabled: Story = {
@@ -55,6 +69,13 @@ export const Disabled: Story = {
 		onChange: () => {},
 		disabled: true,
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const Dark: Story = {
@@ -66,9 +87,9 @@ export const Dark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };
@@ -83,9 +104,9 @@ export const DarkDisabled: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };

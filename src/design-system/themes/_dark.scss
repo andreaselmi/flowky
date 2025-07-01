@@ -4,17 +4,19 @@
 
 $dark-theme: (
 	// Backgrounds
-	#{tokens.$TOKEN_BG_PRIMARY}: linear-gradient(
+	#{tokens.$TOKEN_BACKGROUND_PRIMARY}: linear-gradient(
 			135deg,
 			#111827 0%,
 			#1e293b 50%,
 			#111827 100%
 		),
 	
-	#{tokens.$TOKEN_BG_CARD}: $white-alpha-5,
-	#{tokens.$TOKEN_BG_CARD_HOVER}: $white-alpha-10,
+	#{tokens.$TOKEN_BACKGROUND_CARD}: $white-alpha-5,
+	#{tokens.$TOKEN_BACKGROUND_CARD_HOVER}: $white-alpha-10,
 
-	#{tokens.$TOKEN_BG_INPUT}: $white-alpha-20,
+	#{tokens.$TOKEN_BACKGROUND_INPUT}: $white-alpha-20,
+
+	#{tokens.$TOKEN_BACKGROUND_SECONDARY}: $gray-800,
 
 	// Borders
 	#{tokens.$TOKEN_BORDER_CARD}: $white-alpha-20,

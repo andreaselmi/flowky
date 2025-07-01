@@ -5,7 +5,15 @@
 	@include button-base;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: $space-2;
+
+	.icon {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 	&.primary {
 		color: $white;

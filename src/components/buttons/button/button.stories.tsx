@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import ThemeWrapper from "../../../../.storybook/theme-wrapper";
 import Button from ".";
 
 const meta = {
 	component: Button,
 	title: "Design-System/Buttons/Button",
-	tags: ["autodocs"],
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -23,9 +23,9 @@ export const PrimaryDark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };
@@ -35,6 +35,13 @@ export const Secondary: Story = {
 		children: "Secondary light button",
 		variant: "secondary",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const SecondaryDark: Story = {
@@ -44,9 +51,9 @@ export const SecondaryDark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };

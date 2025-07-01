@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import ThemeWrapper from "../../../.storybook/theme-wrapper";
 import ToggleThemeButton from "./toggle-theme-button";
 
 const meta = {
 	component: ToggleThemeButton,
 	title: "Design-System/Buttons/ToggleThemeButton",
-	tags: ["autodocs"],
 } satisfies Meta<typeof ToggleThemeButton>;
 
 export default meta;
@@ -18,9 +18,9 @@ export const Light: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="light">
+			<ThemeWrapper theme="light">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };
@@ -32,9 +32,9 @@ export const Dark: Story = {
 	},
 	decorators: [
 		Story => (
-			<div className="storybook-dark-container">
+			<ThemeWrapper theme="dark">
 				<Story />
-			</div>
+			</ThemeWrapper>
 		),
 	],
 };

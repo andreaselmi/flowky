@@ -1,11 +1,11 @@
 import "@/design-system/main.scss";
 
-import Home from "@/features/home";
+import Routes from "@/routes";
 
 const App = () => {
 	return (
 		<main className="main">
-			<Home />
+			<Routes />
 		</main>
 	);
 };

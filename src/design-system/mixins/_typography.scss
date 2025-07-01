@@ -130,3 +130,11 @@
   line-height: $line-height-tight;
   letter-spacing: $letter-spacing-wide;
 }
+
+// ===================================
+// UTILITY MIXINS
+// ===================================
+
+@mixin text-muted {
+  color: var(--color-text-secondary);
+}
