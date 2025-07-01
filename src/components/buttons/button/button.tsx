@@ -22,15 +22,35 @@ const Button = ({
 	const renderIcon = () => {
 		if (!Icon) return null;
 
-		const defaultIconProps = {
-			width: 16,
-			height: 16,
+		// Check if icon already has size prop
+		const iconProps = Icon.props as {
+			size?: number;
+			width?: number;
+			height?: number;
+		};
+		const hasSize = iconProps?.size !== undefined;
+		const hasWidthHeight =
+			iconProps?.width !== undefined || iconProps?.height !== undefined;
+
+		let defaultIconProps: Record<string, string | number | boolean> = {
 			"aria-hidden": "true", // hide icon from screen readers
 		};
 
+		// If icon doesn't already have sizing props, provide defaults
+		if (!hasSize && !hasWidthHeight) {
+			// Try to use size prop first (many icon libraries prefer this)
+			// If that doesn't work, the icon component will ignore it
+			defaultIconProps = {
+				...defaultIconProps,
+				size: 16,
+				width: 16,
+				height: 16,
+			};
+		}
+
 		const iconWithProps = cloneElement(Icon, {
 			...defaultIconProps,
-			...(Icon.props || {}),
+			...(Icon.props ?? {}),
 		});
 
 		return <div className={styles.icon}>{iconWithProps}</div>;

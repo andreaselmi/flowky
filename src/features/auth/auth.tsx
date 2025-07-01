@@ -44,10 +44,16 @@ const Auth = () => {
 
 					<div className={styles.socialButtons}>
 						<SocialButton
+							onClick={() => {
+								console.log("Google");
+							}}
 							label="Continua con Google"
 							icon={<GoogleIcon />}
 						/>
 						<SocialButton
+							onClick={() => {
+								console.log("Facebook");
+							}}
 							label="Continua con Facebook"
 							icon={<FacebookIcon width={20} height={20} />}
 						/>

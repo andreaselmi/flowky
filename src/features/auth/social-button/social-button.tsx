@@ -4,6 +4,7 @@ import type { ButtonProps } from "@/components/buttons/button/button";
 interface SocialButtonProps extends Omit<ButtonProps, "children"> {
 	icon: React.ReactElement;
 	label: string;
+	onClick: () => void;
 }
 
 const SocialButton = ({ icon, label, ...restProps }: SocialButtonProps) => {

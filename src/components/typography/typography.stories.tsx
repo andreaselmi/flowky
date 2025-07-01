@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import ThemeWrapper from "../../../.storybook/theme-wrapper";
 import Typography from "./typography";
 
 const meta: Meta<typeof Typography> = {
@@ -15,6 +16,13 @@ export const H1: Story = {
 		variant: "h1",
 		children: "Typography 1",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const H2: Story = {
@@ -22,6 +30,13 @@ export const H2: Story = {
 		variant: "h2",
 		children: "Typography 2",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const H3: Story = {
@@ -29,6 +44,13 @@ export const H3: Story = {
 		variant: "h3",
 		children: "Typography 3",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const H4: Story = {
@@ -36,6 +58,13 @@ export const H4: Story = {
 		variant: "h4",
 		children: "Typography 4",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const H5: Story = {
@@ -43,6 +72,13 @@ export const H5: Story = {
 		variant: "h5",
 		children: "Typography 5",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const H6: Story = {
@@ -50,6 +86,13 @@ export const H6: Story = {
 		variant: "h6",
 		children: "Typography 6",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const Body: Story = {
@@ -57,6 +100,13 @@ export const Body: Story = {
 		variant: "body",
 		children: "Typography Body",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const BodyLarge: Story = {
@@ -64,6 +114,13 @@ export const BodyLarge: Story = {
 		variant: "bodyLarge",
 		children: "Typography Body Large",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
 
 export const BodySmall: Story = {
@@ -71,4 +128,11 @@ export const BodySmall: Story = {
 		variant: "bodySmall",
 		children: "Typography Body Small",
 	},
+	decorators: [
+		Story => (
+			<ThemeWrapper theme="light">
+				<Story />
+			</ThemeWrapper>
+		),
+	],
 };
