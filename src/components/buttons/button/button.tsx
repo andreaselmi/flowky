@@ -3,7 +3,8 @@ import type { ReactElement, ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps
+	extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	onClick?: () => void;
 	children: ReactNode;
 	variant?: "primary" | "secondary";

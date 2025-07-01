@@ -13,6 +13,7 @@ interface ToggleThemeButtonProps
 const ToggleThemeButton = ({
 	onClick,
 	isDarkMode,
+	className,
 	...props
 }: ToggleThemeButtonProps) => {
 	return (
@@ -21,7 +22,7 @@ const ToggleThemeButton = ({
 				isDarkMode ? "Switch to light mode" : "Switch to dark mode"
 			}
 			onClick={onClick}
-			className={clsx(styles.iconButton)}
+			className={clsx(styles.iconButton, className)}
 			{...props}
 		>
 			{isDarkMode ? <Sun /> : <Moon />}

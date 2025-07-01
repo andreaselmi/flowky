@@ -5,6 +5,7 @@
 	@include button-base;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: $space-2;
 
 	&.primary {

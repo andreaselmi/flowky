@@ -10,14 +10,16 @@ $light-theme: (
 	// 		#ffffff 50%,
 	// 		#f3f4f6 100%
 	// 	),
-	#{tokens.$TOKEN_BG_PRIMARY}: linear-gradient(
+	#{tokens.$TOKEN_BACKGROUND_PRIMARY}: linear-gradient(
 		135deg,
 		#fdf2f8 0%,
 		#fed7aa 50%,
 		#f9fafb 100%
 	),
-	#{tokens.$TOKEN_BG_CARD}: $white-alpha-40,
-	#{tokens.$TOKEN_BG_CARD_HOVER}: $white-alpha-60,
+	#{tokens.$TOKEN_BACKGROUND_CARD}: $white-alpha-40,
+	#{tokens.$TOKEN_BACKGROUND_CARD_HOVER}: $white-alpha-60,
+
+	#{tokens.$TOKEN_BACKGROUND_SECONDARY}: $gray-100,
 
 	// Borders
 	#{tokens.$TOKEN_BORDER_CARD}: $gray-200,

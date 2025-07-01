@@ -1,0 +1,12 @@
+export declare const authCard: string;
+export declare const authCardDivider: string;
+export declare const authCardDividerContainer: string;
+export declare const authCardDividerText: string;
+export declare const authCardFooter: string;
+export declare const authCardSubtitle: string;
+export declare const authCardTerms: string;
+export declare const authCardTermsLink: string;
+export declare const authCardTitle: string;
+export declare const container: string;
+export declare const pageTitle: string;
+export declare const socialButtons: string;
