@@ -8,6 +8,10 @@
 	justify-content: center;
 	gap: $space-2;
 
+	.icon {
+		flex-shrink: 0;
+	}
+
 	&.primary {
 		color: $white;
 		background: var(--color-gradient-primary);

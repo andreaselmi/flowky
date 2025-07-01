@@ -1,5 +1,4 @@
-import { FacebookIcon } from "lucide-react";
-
+import FacebookIcon from "@/components/icons/facebook";
 import GoogleIcon from "@/components/icons/google";
 import ToggleThemeButton from "@/components/toggle-theme-button";
 import Typography from "@/components/typography";
@@ -50,7 +49,7 @@ const Auth = () => {
 						/>
 						<SocialButton
 							label="Continua con Facebook"
-							icon={<FacebookIcon />}
+							icon={<FacebookIcon width={20} height={20} />}
 						/>
 					</div>
 

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ReactElement, ReactNode } from "react";
+import { cloneElement, type ReactElement, type ReactNode } from "react";
 
 import styles from "./styles.module.scss";
 
@@ -19,13 +19,30 @@ const Button = ({
 	className,
 	...restProps
 }: ButtonProps) => {
+	const renderIcon = () => {
+		if (!Icon) return null;
+
+		const defaultIconProps = {
+			width: 16,
+			height: 16,
+			"aria-hidden": "true", // hide icon from screen readers
+		};
+
+		const iconWithProps = cloneElement(Icon, {
+			...defaultIconProps,
+			...(Icon.props || {}),
+		});
+
+		return <div className={styles.icon}>{iconWithProps}</div>;
+	};
+
 	return (
 		<button
 			className={clsx(styles.button, styles[variant], className)}
 			onClick={onClick}
 			{...restProps}
 		>
-			{Icon}
+			{renderIcon()}
 			{children}
 		</button>
 	);
