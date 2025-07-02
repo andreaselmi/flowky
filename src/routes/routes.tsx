@@ -3,10 +3,16 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import Auth from "@/features/auth/auth";
 import Home from "@/features/home/home";
 
+import PrivateRoute from "./private-route/private-route";
+
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Home />,
+		element: (
+			<PrivateRoute>
+				<Home />
+			</PrivateRoute>
+		),
 	},
 	{
 		path: "/auth",

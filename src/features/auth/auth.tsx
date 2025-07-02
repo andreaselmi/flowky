@@ -1,14 +1,48 @@
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+
 import FacebookIcon from "@/components/icons/facebook";
 import GoogleIcon from "@/components/icons/google";
 import ToggleThemeButton from "@/components/toggle-theme-button";
 import Typography from "@/components/typography";
+import { useAuth } from "@/context/auth";
 import { useTheme } from "@/context/theme";
 
 import SocialButton from "./social-button";
 import styles from "./styles.module.scss";
 
+const provider = new GoogleAuthProvider();
+
 const Auth = () => {
 	const { toggleTheme, theme } = useTheme();
+	const { user } = useAuth();
+	const auth = getAuth();
+	const navigate = useNavigate();
+	const [loading, setLoading] = useState(true);
+
+	const handleGoogleSignIn = async () => {
+		try {
+			await signInWithPopup(auth, provider);
+		} catch (error) {
+			console.error(error);
+		}
+	};
+
+	const handleFacebookSignIn = () => {
+		console.log("Facebook");
+	};
+
+	useEffect(() => {
+		if (user?.id) {
+			navigate("/");
+		} else {
+			setLoading(false);
+		}
+	}, [user, navigate]);
+
+	if (loading) return <div>Auth Loading...</div>;
+
 	return (
 		<>
 			{/* TODO: Remove it later */}
@@ -44,16 +78,12 @@ const Auth = () => {
 
 					<div className={styles.socialButtons}>
 						<SocialButton
-							onClick={() => {
-								console.log("Google");
-							}}
+							onClick={handleGoogleSignIn}
 							label="Continua con Google"
 							icon={<GoogleIcon />}
 						/>
 						<SocialButton
-							onClick={() => {
-								console.log("Facebook");
-							}}
+							onClick={handleFacebookSignIn}
 							label="Continua con Facebook"
 							icon={<FacebookIcon width={20} height={20} />}
 						/>

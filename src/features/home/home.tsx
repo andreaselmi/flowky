@@ -1,3 +1,4 @@
+import { getAuth, signOut } from "firebase/auth";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 
@@ -15,9 +16,14 @@ import styles from "./styles.module.scss";
 const Home = () => {
 	const { toggleTheme, theme } = useTheme();
 	const [isDialogOpen, setIsDialogOpen] = useState(false);
+	const auth = getAuth();
 
 	return (
 		<div className={styles.home}>
+			<Button variant="primary" onClick={() => signOut(auth)}>
+				Sign Out
+			</Button>
+
 			<Select
 				label="Seleziona un'opzione"
 				id="select"
