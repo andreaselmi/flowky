@@ -21,7 +21,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 				});
 				setLoading(false);
 			} else {
-				console.log("user is signed out");
+				// user is signed out
 				setUser(null);
 				setLoading(false);
 			}

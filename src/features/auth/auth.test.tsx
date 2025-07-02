@@ -1,22 +1,10 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { BrowserRouter } from "react-router";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-import AuthProvider from "@/context/auth/auth-provider/auth-provider";
-import ThemeProvider from "@/context/theme/theme-provider/theme-provider";
+import { render } from "@/test/renderWithProviders";
 
 import Auth from "./auth";
-
-vi.mock("firebase/auth", () => ({
-	onAuthStateChanged: vi.fn((_, callback) => {
-		callback(null);
-		return vi.fn();
-	}),
-	GoogleAuthProvider: vi.fn(),
-	getAuth: vi.fn(),
-	signInWithPopup: vi.fn(),
-}));
 
 // Mock the icon components
 vi.mock("@/components/icons/facebook", () => ({
@@ -26,17 +14,6 @@ vi.mock("@/components/icons/facebook", () => ({
 vi.mock("@/components/icons/google", () => ({
 	default: () => <span data-testid="google-icon">G</span>,
 }));
-
-// Custom render with theme provider
-const renderWithProviders = ({ element }: { element: React.ReactNode }) => {
-	return render(
-		<ThemeProvider>
-			<AuthProvider>
-				<BrowserRouter>{element}</BrowserRouter>
-			</AuthProvider>
-		</ThemeProvider>
-	);
-};
 
 // Mock localStorage for theme functionality
 const mockLocalStorage = {
@@ -66,7 +43,7 @@ describe("Auth", () => {
 
 	describe("Content and Layout", () => {
 		it("displays the main page title and subtitle", async () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			await waitFor(() => {
 				expect(
@@ -79,7 +56,7 @@ describe("Auth", () => {
 		});
 
 		it("displays the authentication card with correct heading and description", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			expect(
 				screen.getByRole("heading", { name: "Entra in Flowky" })
@@ -92,7 +69,7 @@ describe("Auth", () => {
 		});
 
 		it("shows the divider text about security", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			expect(
 				screen.getByText("Semplice, veloce e sicuro")
@@ -100,7 +77,7 @@ describe("Auth", () => {
 		});
 
 		it("displays terms of service and privacy policy text", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			expect(
 				screen.getByText(/Accedendo accetti i nostri/)
@@ -110,7 +87,7 @@ describe("Auth", () => {
 		});
 
 		it("shows the footer copyright text", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			expect(
 				screen.getByText(
@@ -122,7 +99,7 @@ describe("Auth", () => {
 
 	describe("Social Login Buttons", () => {
 		it("displays Google login button with correct label and icon", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			const googleButton = screen.getByRole("button", {
 				name: /continua con google/i,
@@ -132,7 +109,7 @@ describe("Auth", () => {
 		});
 
 		it("displays Facebook login button with correct label and icon", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			const facebookButton = screen.getByRole("button", {
 				name: /continua con facebook/i,
@@ -143,7 +120,7 @@ describe("Auth", () => {
 
 		it("social buttons are clickable", async () => {
 			const user = userEvent.setup();
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			const googleButton = screen.getByRole("button", {
 				name: /continua con google/i,
@@ -162,7 +139,7 @@ describe("Auth", () => {
 
 	describe("Accessibility", () => {
 		it("has proper heading hierarchy", () => {
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			const h1 = screen.getByRole("heading", { level: 1 });
 			const h2 = screen.getByRole("heading", { level: 2 });
@@ -173,7 +150,7 @@ describe("Auth", () => {
 
 		it("social buttons are accessible via keyboard", async () => {
 			const user = userEvent.setup();
-			renderWithProviders({ element: <Auth /> });
+			render(<Auth />);
 
 			const googleButton = screen.getByRole("button", {
 				name: /continua con google/i,

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import ThemeWrapper from "../../../.storybook/theme-wrapper";
+import Providers from "../../../.storybook/providers";
 import Auth from ".";
 
 const meta = {
@@ -17,9 +17,9 @@ export const Default: Story = {
 	decorators: [
 		Story => {
 			return (
-				<ThemeWrapper theme="light">
+				<Providers theme="light">
 					<Story />
-				</ThemeWrapper>
+				</Providers>
 			);
 		},
 	],
@@ -30,9 +30,9 @@ export const DarkTheme: Story = {
 	decorators: [
 		Story => {
 			return (
-				<ThemeWrapper theme="dark">
+				<Providers theme="dark">
 					<Story />
-				</ThemeWrapper>
+				</Providers>
 			);
 		},
 	],
