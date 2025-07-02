@@ -29,7 +29,6 @@ Object.defineProperty(window, "localStorage", {
 describe("Auth", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
-		mockLocalStorage.getItem.mockReturnValue(null);
 
 		// Mock document.documentElement.classList
 		Object.defineProperty(document.documentElement, "classList", {

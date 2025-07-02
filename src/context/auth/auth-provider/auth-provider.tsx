@@ -24,6 +24,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 				// user is signed out
 				setUser(null);
 				setLoading(false);
+				console.log("user is signed out");
 			}
 		});
 	}, []);
@@ -31,9 +32,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 	if (loading) return <div>Loading...</div>;
 
 	return (
-		<AuthContext.Provider value={{ user, loading }}>
-			{children}
-		</AuthContext.Provider>
+		<AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
 	);
 };
 
