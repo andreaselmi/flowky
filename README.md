@@ -31,7 +31,6 @@ A simple, visual productivity tracking app for personal time management. Track y
 ### **Backend & Database**
 - **Firebase Authentication** - User management with social login
 - **Cloud Firestore** - NoSQL database for activity data
-- **Firebase Hosting** - Static site hosting
 - **Firebase Security Rules** - Data protection and access control
 
 ### **Development & Testing**
