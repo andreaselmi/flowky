@@ -2,15 +2,10 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 
-import FacebookIcon from "@/components/icons/facebook";
-import GoogleIcon from "@/components/icons/google";
-import ToggleThemeButton from "@/components/toggle-theme-button";
-import Typography from "@/components/typography";
 import { useAuth } from "@/context/auth";
 import { useTheme } from "@/context/theme";
 
-import SocialButton from "./social-button";
-import styles from "./styles.module.scss";
+import AuthView from "./auth.view/auth.view";
 
 const provider = new GoogleAuthProvider();
 
@@ -41,86 +36,14 @@ const Auth = () => {
 		}
 	}, [user, navigate]);
 
-	if (loading) return <div>Auth Loading...</div>;
-
 	return (
-		<>
-			{/* TODO: Remove it later */}
-			<ToggleThemeButton
-				onClick={toggleTheme}
-				isDarkMode={theme === "dark"}
-				style={{
-					position: "fixed",
-					top: "32px",
-					right: "32px",
-					zIndex: 999,
-				}}
-			/>
-			<div className={styles.container}>
-				<Typography variant="h1" className={styles.pageTitle}>
-					Flowky
-				</Typography>
-				<Typography variant="body">
-					Traccia la tua produttività
-				</Typography>
-
-				<section className={styles.authCard}>
-					<Typography variant="h2" className={styles.authCardTitle}>
-						Entra in Flowky
-					</Typography>
-					<Typography
-						variant="body"
-						className={styles.authCardSubtitle}
-					>
-						Usa il tuo account social per iniziare a tracciare le
-						tue attività
-					</Typography>
-
-					<div className={styles.socialButtons}>
-						<SocialButton
-							onClick={handleGoogleSignIn}
-							label="Continua con Google"
-							icon={<GoogleIcon />}
-						/>
-						<SocialButton
-							onClick={handleFacebookSignIn}
-							label="Continua con Facebook"
-							icon={<FacebookIcon width={20} height={20} />}
-						/>
-					</div>
-
-					<div className={styles.authCardDividerContainer}>
-						<div className={styles.authCardDivider} />
-						<Typography
-							variant="bodySmall"
-							className={styles.authCardDividerText}
-						>
-							Semplice, veloce e sicuro
-						</Typography>
-					</div>
-
-					<Typography
-						className={styles.authCardTerms}
-						variant="bodySmall"
-					>
-						Accedendo accetti i nostri{" "}
-						<span className={styles.authCardTermsLink}>
-							Termini di Servizio
-						</span>{" "}
-						e la{" "}
-						<span className={styles.authCardTermsLink}>
-							Privacy Policy
-						</span>
-					</Typography>
-				</section>
-
-				<div className={styles.authCardFooter}>
-					<Typography variant="bodySmall">
-						© 2025 Flowky. Designed with ❤️ for productivity.
-					</Typography>
-				</div>
-			</div>
-		</>
+		<AuthView
+			toggleTheme={toggleTheme}
+			theme={theme}
+			handleGoogleSignIn={handleGoogleSignIn}
+			handleFacebookSignIn={handleFacebookSignIn}
+			loading={loading}
+		/>
 	);
 };
 

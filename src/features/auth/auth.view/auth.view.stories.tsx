@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import Providers from "../../../.storybook/providers";
-import Auth from ".";
+import Providers from "../../../../.storybook/providers";
+import AuthView from ".";
 
 const meta = {
-	component: Auth,
+	component: AuthView,
 	title: "Pages/Auth",
-} satisfies Meta<typeof Auth>;
+} satisfies Meta<typeof AuthView>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -23,6 +23,13 @@ export const Default: Story = {
 			);
 		},
 	],
+	args: {
+		toggleTheme: () => {},
+		theme: "light",
+		handleGoogleSignIn: () => {},
+		handleFacebookSignIn: () => {},
+		loading: false,
+	},
 };
 
 // Storia con tema scuro
@@ -36,5 +43,11 @@ export const DarkTheme: Story = {
 			);
 		},
 	],
-	play: async () => {},
+	args: {
+		toggleTheme: () => {},
+		theme: "dark",
+		handleGoogleSignIn: () => {},
+		handleFacebookSignIn: () => {},
+		loading: false,
+	},
 };

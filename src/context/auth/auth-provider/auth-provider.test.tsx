@@ -58,8 +58,6 @@ describe("AuthProvider", () => {
 				</AuthProvider>
 			);
 
-			screen.debug();
-
 			expect(screen.getByText("Loading...")).toBeInTheDocument();
 		});
 
@@ -150,8 +148,6 @@ describe("AuthProvider", () => {
 					<TestComponent />
 				</AuthProvider>
 			);
-
-			screen.debug();
 
 			await waitFor(() => {
 				expect(screen.getByTestId("auth-status")).toHaveTextContent(
