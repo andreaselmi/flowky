@@ -1,5 +1,5 @@
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { initializeFirebase } from "@/helpers/firebase";
 
@@ -29,10 +29,14 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 		});
 	}, []);
 
+	const memoizedUser = useMemo(() => user, [user]);
+
 	if (loading) return <div>Loading...</div>;
 
 	return (
-		<AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
+		<AuthContext.Provider value={{ user: memoizedUser }}>
+			{children}
+		</AuthContext.Provider>
 	);
 };
 
